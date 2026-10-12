@@ -1,975 +1,650 @@
-# Tổng Hợp 20 Bài Báo Khoa Học (Research Papers) Cho Dự Án Trợ Lý Thủ Tục Hành Chính (V10.5)
+# Tổng Hợp 33 Bài Báo Khoa Học Cho Dự Án Trợ Lý Thủ Tục Hành Chính (Sys_3_4)
 
-> **Tài liệu tham khảo nghiên cứu (Literature Review & Related Works)**  
-> **Chủ đề dự án:** Trợ lý ảo AI tư vấn dịch vụ công & thủ tục hành chính sử dụng mô hình ngôn ngữ nhỏ cục bộ (Local SLM 1.5B–3B), kiến trúc truy xuất tăng cường kết hợp hệ thống kép (Dual-System RAG: CSDL cấu trúc FTS5 + Web Search) và cơ chế tự kiểm chứng (Verifier / Grounding Guard).  
-> **Trạng thái tài liệu:** Toàn bộ 20/20 bài báo đều là **Open-Access / Full-text PDF** được tải về máy và lưu trữ với **tên gốc chuẩn xác của bài báo** tại thư mục `D:\V10.5\Documentation\research paper\`, đi kèm bản phân tích chuyên sâu `literature_review.md` chuẩn học thuật.
+> Danh mục tra cứu theo thư mục toàn văn. Mỗi mục gồm trích dẫn, trạng thái bình duyệt, link đã kiểm tra chéo, tệp PDF và liên kết tới bản tóm tắt học thuật chi tiết (7 phần: tóm tắt, bối cảnh, phương pháp, thực nghiệm, điểm mạnh, hạn chế, kết luận) viết lại từ toàn văn.
 
----
-
-## Mục lục phân loại theo chủ đề
-
-1. [Nhóm 1: AI Hội Thoại & Chatbot Dịch Vụ Công / Hành Chính Điện Tử (E-Government Chatbots)](#nhóm-1-ai-hội-thoại--chatbot-dịch-vụ-công--hành-chính-điện-tử-e-government)
-2. [Nhóm 2: RAG Cho Hỏi Đáp Pháp Luật, Quy Định & Thủ Tục (Legal & Regulatory RAG)](#nhóm-2-rag-cho-hỏi-đáp-pháp-luật-quy-định--thủ-tục-legal--regulatory-rag)
-3. [Nhóm 3: Kiểm Chứng, Verifier & Giảm Ảo Giác Trong RAG (Fact-Checking & Verifiers)](#nhóm-3-kiểm-chứng-verifier--giảm-ảo-giác-trong-rag-fact-checking--verifiers)
-4. [Nhóm 4: Truy Xuất Lai & Hệ Thống Kép (Hybrid & Dual-System Retrieval)](#nhóm-4-truy-xuất-lai--hệ-thống-kép-hybrid--dual-system-retrieval)
-5. [Nhóm 5: Mô Hình Ngôn Ngữ Nhỏ (SLMs) & Triển Khai Cục Bộ (Local/Edge SLMs)](#nhóm-5-mô-hình-ngôn-ngữ-nhỏ-slms--triển-khai-cục-bộ-localedge-slms)
-6. [Bảng tổng hợp đối sánh 20 bài báo theo khía cạnh dự án V10.5](#bảng-tổng-hợp-đối-sánh-20-bài-báo-theo-khía-cạnh-dự-án-v105)
-7. [Khung cấu trúc bài báo khoa học đề xuất cho Dự án V10.5](#khung-cấu-trúc-bài-báo-khoa-học-đề-xuất-cho-dự-án-v105)
+> Phiên bản cũ của tài liệu này (V10.5, 20 bài, có các preprint đã bị thay) được lưu tại `_archived_preprints/RESEARCH_PAPERS_V10.5_old.md`.
 
 ---
 
-## Nhóm 1: AI Hội Thoại & Chatbot Dịch Vụ Công / Hành Chính Điện Tử
+## Nhóm 01: Public Sector LLM Safety & Privacy — An toàn, quyền riêng tư và độ tin cậy LLM trong khu vực công
 
-### 1. GuidaPA: Privacy-Preserving Chatbot for Public Administration via Federated Learning
-- **Tác giả:** Daniel M. Jimenez-Gutierrez, Albenzio Cirillo, Raffaele Nicolussi, Alessio Beltrame, Andrea Vitaletti (Sapienza University of Rome; Fondazione Ugo Bordoni)
-- **Năm xuất bản:** 2026
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2606.01386 [cs.AI]*
-- **Phân loại nghiên cứu:** `Primary Architecture & Privacy-Preserving System`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2606.01386](https://arxiv.org/abs/2606.01386)
-- **Tệp toàn văn (PDF bản gốc):** [`GuidaPA - Privacy-Preserving Chatbot for Public Administration via Federated Learning.pdf`](01_E-Government_Chatbots/01_GuidaPA_2026_Privacy_Preserving_Chatbot_Public_Admin/GuidaPA%20-%20Privacy-Preserving%20Chatbot%20for%20Public%20Administration%20via%20Federated%20Learning.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](01_E-Government_Chatbots/01_GuidaPA_2026_Privacy_Preserving_Chatbot_Public_Admin/literature_review.md)
+### 01. Analyzing Leakage of Personally Identifiable Information in Language Models
+- **Tác giả:** Nils Lukas, Ahmed Salem, Robert Sim, Shruti Tople, Lukas Wutschitz, Santiago Zanella-Béguelin (University of Waterloo; Microsoft)
+- **Năm:** 2023
+- **Nguồn công bố:** 2023 IEEE Symposium on Security and Privacy (IEEE S&P 2023) — hội nghị bảo mật hàng đầu, có bình duyệt
+- **DOI / Link:** [https://doi.org/10.1109/SP46215.2023.10179300](https://doi.org/10.1109/SP46215.2023.10179300)
+- **Tệp toàn văn:** [`Analyzing Leakage of Personally Identifiable Information in Language Models.pdf`](01_Public_Sector_LLM_Safety_Privacy/01_Lukas_2023_PII_Leakage_Language_Models/Analyzing%20Leakage%20of%20Personally%20Identifiable%20Information%20in%20Language%20Models.pdf)
+- **Tóm tắt chi tiết:** [`paper_05.md`](../../02_related_work/paper_summaries/paper_05.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-Cơ quan hành chính công muốn dùng chatbot LLM để trả lời nghiệp vụ, nhưng dữ liệu nội bộ (ticket, sổ tay cán bộ, trích xuất CSDL) không được gom về một máy chủ trung tâm vì ràng buộc pháp lý và tổ chức.
+**Tổng quan.** Bài báo nghiên cứu rủi ro mô hình ngôn ngữ (LM) làm rò rỉ thông tin định danh cá nhân (PII) từ dữ liệu tinh chỉnh. Tác giả đưa ra định nghĩa dạng trò chơi (game-based) cho ba loại tấn công hộp đen — trích xuất (extraction), tái dựng (reconstruction) và suy luận (inference) PII — đề xuất thuật toán tấn công mới và đo hiệu quả của hai biện pháp phòng vệ: che PII bằng NER (scrubbing) và huấn luyện riêng tư vi phân (DP). Kết quả chính: tấn công tái dựng mới tìm lại được tới 10× nhiều PII hơn tấn công trước; DP ở mức câu giảm mạnh rò rỉ nhưng vẫn lộ khoảng 3% chuỗi PII.
 
-Câu hỏi nghiên cứu: *Học liên kết (Federated Learning) có cho ra chatbot hành chính chất lượng gần bằng tinh chỉnh tập trung mà vẫn giữ dữ liệu tại chỗ không?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-GuidaPA tinh chỉnh LLM theo kiểu liên kết trên tài liệu của hai nền tảng hành chính quốc gia Ý là SIGESON và SIDFORS.
-
-- **Dữ liệu:** khoảng 8 trang sổ tay SIGESON và 31 trang sổ tay/FAQ SIDFORS. Nghiên cứu dùng tài liệu công khai làm dữ liệu thay thế an toàn; mục tiêu triển khai là dữ liệu nội bộ không được chia sẻ.
-- **Kiến trúc:** kiểm soát truy cập theo vai trò, tiền xử lý bảo mật phía client, theo dõi hiệu ứng non-IID giữa các client.
-- **Huấn luyện:** QLoRA 4-bit, 15 vòng federated, chia 80/20 train/test cho mỗi client; đo bằng ROUGE, BLEU-4 và METEOR.
-
-#### Kết quả thực nghiệm chính
-Mô hình federated tốt nhất đạt chất lượng gần bằng tinh chỉnh tập trung (private centralized), trong khi dữ liệu không rời máy của từng cơ quan.
-
-- ROUGE-1/2/L 61.10/55.77/59.44, BLEU-4 45.02, METEOR 63.94.
-- So với mô hình tổng quát chưa tinh chỉnh: ROUGE-1 tăng từ 41.45 lên 62.18, BLEU-4 tăng từ 26.97 lên 50.90.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Bối cảnh vận hành thật trong hành chính công Ý, không phải y tế hay giáo dục. Có số đo rõ ràng, so với cả baseline tập trung lẫn mô hình chưa tinh chỉnh.
-- **Hạn chế (Limitations):** Kho dữ liệu nhỏ (khoảng 39 trang) và chỉ đo độ trùng từ (ROUGE/BLEU/METEOR), chưa đo tính đúng sự thật. Mỗi cơ quan cần hạ tầng tính toán riêng để huấn luyện liên kết.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Cơ sở lý luận khoa học vững chắc bảo vệ quyết định chạy mô hình offline/local qua Ollama (`qwen2.5:1.5b`) trong V10.5 để không rò rỉ thông tin công dân.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 1 (Introduction) & Section 3.1 (Privacy Architecture)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Public administrations often cannot centralise internal data; GuidaPA shows that federated QLoRA fine-tuning can approach centralised quality while keeping data on-site (Jimenez-Gutierrez et al., 2026). Our system takes a simpler route to the same privacy goal: a small model runs fully on-premise, without any training."
+- **Phương pháp:** Tấn công trích xuất/tái tạo/suy luận PII; đánh giá scrubbing và DP
+- **Dữ liệu:** ECHR, Enron, Yelp-Health; GPT-2
+- **Thước đo:** Precision/Recall rò rỉ PII
+- **Kết quả chính:** Không phòng vệ: precision 29,56%, recall 22,96%; DP ε=8 còn khoảng 3%; scrubbing dựa trên NER không hoàn hảo.
+- **Hạn chế:** Kết quả là cận dưới; chỉ khớp nguyên văn.
+- **Áp dụng cho Sys_3_4:** Cơ sở cho che PII và chạy on-prem trong tầng policy.
 
 ---
 
-### 2. GovAI-Pipe: A Layered AI Governance Pipeline for Citizen-Facing AI in Turkey's e-Government Gateway
-- **Tác giả:** Ahmet Kaplan (Istanbul Medipol University)
-- **Năm xuất bản:** 2026
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2606.01417 [cs.AI]*
-- **Phân loại nghiên cứu:** `Governance Framework (Design Science Research)`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2606.01417](https://arxiv.org/abs/2606.01417)
-- **Tệp toàn văn (PDF bản gốc):** [`GovAI-Pipe - A Layered AI Governance Pipeline for Citizen-Facing AI in Turkey's e-Government Gateway.pdf`](01_E-Government_Chatbots/02_GovAI-Pipe_2026_Governance_Pipeline_eGovernment/GovAI-Pipe%20-%20A%20Layered%20AI%20Governance%20Pipeline%20for%20Citizen-Facing%20AI%20in%20Turkey%27s%20e-Government%20Gateway.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](01_E-Government_Chatbots/02_GovAI-Pipe_2026_Governance_Pipeline_eGovernment/literature_review.md)
+### 02. Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection
+- **Tác giả:** Kai Greshake, Sahar Abdelnabi, Shailesh Mishra, Christoph Endres, Thorsten Holz, Mario Fritz (Saarland University; sequire technology; CISPA Helmholtz Center for Information Security)
+- **Năm:** 2023
+- **Nguồn công bố:** Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security (AISec '23, đồng tổ chức với ACM CCS 2023) — workshop có bình duyệt của ACM
+- **DOI / Link:** [https://doi.org/10.1145/3605764.3623985](https://doi.org/10.1145/3605764.3623985)
+- **Tệp toàn văn:** [`Not what you've signed up for - Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection.pdf`](01_Public_Sector_LLM_Safety_Privacy/02_Greshake_2023_Indirect_Prompt_Injection/Not%20what%20you%27ve%20signed%20up%20for%20-%20Compromising%20Real-World%20LLM-Integrated%20Applications%20with%20Indirect%20Prompt%20Injection.pdf)
+- **Tóm tắt chi tiết:** [`paper_06.md`](../../02_related_work/paper_summaries/paper_06.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-Cổng e-Devlet của Thổ Nhĩ Kỳ phục vụ hơn 68 triệu người dùng với hơn 9.200 dịch vụ và đang tích hợp AI (chatbot hướng dẫn thủ tục, sàng lọc điều kiện hưởng chính sách). Tuy vậy, chưa có hạ tầng kỹ thuật nối các khung chính sách AI (EU AI Act, OECD AI Principles, Chiến lược AI quốc gia) với việc vận hành thực tế.
+**Tổng quan.** Bài báo giới thiệu khái niệm *chèn lệnh gián tiếp* (Indirect Prompt Injection – IPI): kẻ tấn công không cần tương tác trực tiếp với mô hình mà cài chỉ dẫn độc hại vào dữ liệu có khả năng được truy xuất khi suy luận (trang web, email, mã nguồn). Tác giả xây dựng phân loại mối đe dọa theo góc nhìn an ninh máy tính và minh họa tính khả thi trên Bing Chat (GPT-4), GitHub Copilot và các ứng dụng tổng hợp dùng GPT-4/text-davinci-003. Kết luận chính: với ứng dụng có truy xuất, “dữ liệu” và “lệnh” không còn tách bạch; xử lý dữ liệu truy xuất không tin cậy tương đương thực thi mã tùy ý.
 
-Câu hỏi nghiên cứu: *Làm sao biến nguyên tắc quản trị AI thành các thành phần kỹ thuật kiểm toán được trong một cổng dịch vụ công tập trung?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-GovAI-Pipe là pipeline quản trị 4 tầng, thiết kế theo phương pháp Design Science Research, gắn vòng đời mô hình AI với các điểm kiểm soát:
-
-- **Tầng 1 – trước triển khai:** kiểm thử thiên kiến, khả năng giải thích, đánh giá tác động quyền riêng tư.
-- **Tầng 2 – triển khai:** phân loại mức rủi ro và quy trình phê duyệt.
-- **Tầng 3 – vận hành:** phát hiện drift, theo dõi công bằng, chuyển cho người xử lý (human-in-the-loop).
-- **Tầng 4 – sau sự cố:** nhật ký kiểm toán, rollback, cơ chế khiếu nại của công dân.
-- Mỗi tầng gắn với điều khoản cụ thể của EU AI Act, GDPR và Chiến lược AI quốc gia.
-
-#### Kết quả thực nghiệm chính
-Đây là nghiên cứu thiết kế, không có thực nghiệm định lượng. Khung được minh hoạ qua hai tình huống rủi ro cao trên e-Devlet để cho thấy nguyên tắc quản trị trở thành thành phần pipeline kiểm toán được.
-
-- Bài không báo cáo độ chính xác hay tỉ lệ lỗi; giá trị nằm ở việc ánh xạ điều khoản chính sách sang điểm kiểm soát kỹ thuật.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Ánh xạ cụ thể từ điều khoản pháp lý sang thành phần kỹ thuật. Bối cảnh cổng dịch vụ công quốc gia quy mô lớn.
-- **Hạn chế (Limitations):** Chưa được kiểm chứng bằng triển khai thực hay số liệu. Một tác giả; khung đề xuất ở mức khái niệm.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Minh chứng thực tế cho kiến trúc phân luồng kiểm soát (Pipeline điều phối 2 Turn + Out-of-table Guard) trong V10.5.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.2 (Pipeline Governance) & Section 3.3 (Turn Orchestration)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Citizen-facing AI needs auditable checkpoints across the model lifecycle, from pre-deployment validation to runtime monitoring and human escalation (Kaplan, 2026). Our pipeline implements the runtime part of this idea: every generated answer passes a verification step before it reaches the citizen."
+- **Phương pháp:** Phân loại và minh họa tấn công chèn lệnh gián tiếp
+- **Dữ liệu:** Không có bộ dữ liệu (proof-of-concept)
+- **Thước đo:** Định tính (kịch bản tấn công)
+- **Kết quả chính:** Chứng minh dữ liệu truy hồi có thể điều khiển LLM: đánh cắp dữ liệu, lừa đảo, lan truyền.
+- **Hạn chế:** Chưa định lượng tỷ lệ thành công.
+- **Áp dụng cho Sys_3_4:** Cơ sở cho lớp chống prompt injection và cách ly ngữ cảnh truy hồi.
 
 ---
 
-### 3. From Values to Benchmarks: Evaluating Large Language Models for Governmental Use in Dutch
-- **Tác giả:** Laurens Samson, Iva Gornishka, Gossa Lô, Yuki M. Asano, Sennay Ghebreab (City of Amsterdam; University of Amsterdam; University of Technology Nuremberg)
-- **Năm xuất bản:** 2026
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2608.09925 [cs.CL]*
-- **Phân loại nghiên cứu:** `Empirical Benchmark & Civil Service Survey`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2608.09925](https://arxiv.org/abs/2608.09925)
-- **Tệp toàn văn (PDF bản gốc):** [`From Values to Benchmarks - Evaluating Large Language Models for Governmental Use in Dutch.pdf`](01_E-Government_Chatbots/03_Grip-on-LLMs_2026_Evaluating_LLMs_Governmental_Use/From%20Values%20to%20Benchmarks%20-%20Evaluating%20Large%20Language%20Models%20for%20Governmental%20Use%20in%20Dutch.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](01_E-Government_Chatbots/03_Grip-on-LLMs_2026_Evaluating_LLMs_Governmental_Use/literature_review.md)
+### 03. Large Legal Fictions: Profiling Legal Hallucinations in Large Language Models
+- **Tác giả:** Matthew Dahl (Yale), Varun Magesh, Mirac Suzgun, Daniel E. Ho (Stanford University, RegLab)
+- **Năm:** 2024
+- **Nguồn công bố:** Journal of Legal Analysis, Vol. 16, No. 1, tr. 64–93 (Oxford University Press; truy cập mở, xuất bản trực tuyến 26/06/2024) — tạp chí có bình duyệt (bài cảm ơn ba người phản biện ẩn danh)
+- **DOI / Link:** [https://doi.org/10.1093/jla/laae003](https://doi.org/10.1093/jla/laae003)
+- **Tệp toàn văn:** [`Large Legal Fictions - Profiling Legal Hallucinations in Large Language Models.pdf`](01_Public_Sector_LLM_Safety_Privacy/03_Dahl_2024_Large_Legal_Fictions/Large%20Legal%20Fictions%20-%20Profiling%20Legal%20Hallucinations%20in%20Large%20Language%20Models.pdf)
+- **Tóm tắt chi tiết:** [`paper_32.md`](../../02_related_work/paper_summaries/paper_32.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-Chính quyền đang triển khai LLM, nhưng ít bộ đánh giá phản ánh đồng thời giá trị của hành chính công và yêu cầu của ngôn ngữ ngoài tiếng Anh (ở đây là tiếng Hà Lan).
+**Tổng quan.** Bài báo là nghiên cứu thực nghiệm có hệ thống đầu tiên về “ảo giác pháp lý” (legal hallucination) của LLM công khai, dùng 14 tác vụ truy vấn kiến thức án lệ liên bang Hoa Kỳ ở ba cấp tòa (Tòa Tối cao – SCOTUS, Tòa Phúc thẩm – USCOA, Tòa Quận – USDC). Với câu hỏi trực tiếp, kiểm chứng được về một vụ án chọn ngẫu nhiên, các LLM ảo giác từ 58% (ChatGPT 4) đến 88% (Llama 2). Ngoài ra, LLM thường chấp nhận tiền đề pháp lý sai của người dùng và đánh giá kém mức độ chắc chắn của chính mình. Bài đề xuất một phân loại ảo giác pháp lý.
 
-Câu hỏi nghiên cứu: *Nên đánh giá một LLM theo những tiêu chí nào trước khi đưa vào dùng trong cơ quan nhà nước?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-Khung "Grip on LLMs" được xây cùng chuyên gia của City of Amsterdam:
-
-- Xác định tiêu chí qua hội đồng tư vấn, nghiên cứu người dùng và khảo sát người dùng một chatbot dành cho công chức.
-- Sáu chiều đánh giá: factuality, honesty, social bias, tiêu thụ năng lượng, chi phí, minh bạch dữ liệu huấn luyện.
-- Benchmark cho hơn 30 mô hình đa ngôn ngữ và mô hình riêng tiếng Hà Lan; công bố mã và trang tổng quan cho người không chuyên.
-
-#### Kết quả thực nghiệm chính
-Không mô hình nào tốt ở mọi chiều, nên việc chọn mô hình luôn phải đánh đổi.
-
-- Chất lượng cao hơn luôn đi kèm tác động môi trường và chi phí lớn hơn; thiên kiến gần như độc lập với hai yếu tố này.
-- Factuality (trả lời đúng) và honesty (thừa nhận khi không biết) do các đặc tính khác nhau chi phối: factuality cao không kéo theo honesty cao.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Tiêu chí xuất phát từ người dùng thật trong cơ quan nhà nước. Tách riêng "trả lời đúng" và "biết nói không biết".
-- **Hạn chế (Limitations):** Tập trung vào tiếng Hà Lan. Đánh giá mô hình đơn lẻ, không đánh giá cả hệ RAG.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Bộ tiêu chuẩn để nhóm dự án V10.5 thiết kế bài đánh giá (Evaluation) và viết phần Thảo luận (Discussion) cho bài báo khoa học.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 4 (Evaluation Methodology) & Section 5 (Discussion)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Governmental LLM evaluation must look beyond accuracy: factuality and honesty are distinct properties, and a model that answers correctly does not necessarily acknowledge what it does not know (Samson et al., 2026). We therefore report answer correctness together with how often the assistant asks for clarification or declines."
+- **Phương pháp:** 14 tác vụ truy vấn án lệ; có/không tham chiếu; phản sự thật; ECE
+- **Dữ liệu:** 5.000 vụ án mỗi cấp tòa liên bang Hoa Kỳ; >800.000 truy vấn
+- **Thước đo:** Tỷ lệ ảo giác, ECE
+- **Kết quả chính:** Ảo giác 58% (GPT-4) đến 88% (Llama 2); thường chấp nhận tiền đề sai; tự tin quá mức.
+- **Hạn chế:** LLM không truy hồi; chỉ án lệ Hoa Kỳ.
+- **Áp dụng cho Sys_3_4:** Bằng chứng không để LLM tự trả lời từ kiến thức tham số; cần clarify và verifier.
 
 ---
 
-### 4. Beyond Single-Policy: Evaluating Composed Organization-Specific Policy Alignment in LLM Chatbots
-- **Tác giả:** Yingjie Liu, Yongxiang Hu, Xuan Wang, Yilun Li, Yunlei Wei, Xiaoyu Wang, Yangfan Zhou (Fudan University; Meituan)
-- **Năm xuất bản:** 2026
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2606.04394 [cs.SE]*
-- **Phân loại nghiên cứu:** `Benchmark & Alignment Methodology`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2606.04394](https://arxiv.org/abs/2606.04394)
-- **Tệp toàn văn (PDF bản gốc):** [`Beyond Single-Policy - Evaluating Composed Organization-Specific Policy Alignment in LLM Chatbots.pdf`](01_E-Government_Chatbots/04_COPAL_2026_Evaluating_Composed_Policy_Alignment/Beyond%20Single-Policy%20-%20Evaluating%20Composed%20Organization-Specific%20Policy%20Alignment%20in%20LLM%20Chatbots.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](01_E-Government_Chatbots/04_COPAL_2026_Evaluating_Composed_Policy_Alignment/literature_review.md)
+### 04. NeMo Guardrails: A Toolkit for Controllable and Safe LLM Applications with Programmable Rails
+- **Tác giả:** Traian Rebedea, Razvan Dinu, Makesh Sreedhar, Christopher Parisien, Jonathan Cohen (NVIDIA)
+- **Năm:** 2023
+- **Nguồn công bố:** Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing: System Demonstrations (EMNLP 2023 Demo), tr. 431–445 — hội nghị có bình duyệt (track demo)
+- **DOI / Link:** [https://aclanthology.org/2023.emnlp-demo.40/](https://aclanthology.org/2023.emnlp-demo.40/)
+- **Tệp toàn văn:** [`NeMo Guardrails - A Toolkit for Controllable and Safe LLM Applications with Programmable Rails.pdf`](01_Public_Sector_LLM_Safety_Privacy/04_Rebedea_2023_NeMo_Guardrails/NeMo%20Guardrails%20-%20A%20Toolkit%20for%20Controllable%20and%20Safe%20LLM%20Applications%20with%20Programmable%20Rails.pdf)
+- **Tóm tắt chi tiết:** [`paper_33.md`](../../02_related_work/paper_summaries/paper_33.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-Chatbot trong tổ chức (y tế, tài chính, dịch vụ công) bị ràng buộc bởi chính sách riêng về nội dung được và không được nói. Các benchmark hiện có chỉ kiểm tra từng chính sách một, nên bỏ sót lỗi khi một yêu cầu đụng tới nhiều chính sách cùng lúc.
+**Tổng quan.** Bài báo giới thiệu NeMo Guardrails, bộ công cụ mã nguồn mở (Apache 2.0) để thêm các “rail” (hàng rào) có thể lập trình vào ứng dụng hội thoại dùng LLM. Khác với rail “nhúng” vào mô hình qua căn chỉnh (alignment) khi huấn luyện, rail lập trình được định nghĩa lúc chạy bằng ngôn ngữ mô hình hóa Colang, độc lập với LLM nền và có thể diễn giải. Runtime đóng vai trò proxy giữa người dùng và LLM, giống một bộ quản lý hội thoại. Kết quả ban đầu cho thấy cách tiếp cận dùng được với nhiều nhà cung cấp LLM, kể cả mô hình mở cỡ nhỏ.
 
-Câu hỏi nghiên cứu: *Chatbot xử lý thế nào khi một câu hỏi đòi hỏi tuân thủ đồng thời nhiều chính sách?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-COPAL là khung tự động đánh giá độ tuân thủ chính sách tổ hợp (composed-policy alignment):
-
-- Sinh câu hỏi từ các mẫu tương tác rút ra thực nghiệm; mỗi câu buộc chatbot xử lý nhiều chính sách trong một câu trả lời.
-- Mỗi câu hỏi đi kèm một "hợp đồng xử lý" nêu rõ phải cung cấp gì và phải tránh gì.
-- Áp dụng trên 30 "thế giới công ty" mô phỏng tổ chức.
-
-#### Kết quả thực nghiệm chính
-Trên 9 mô hình, câu hỏi tổ hợp chính sách có tỉ lệ lỗi 33.1%.
-
-- Lỗi thường chỉ một phía: chatbot làm đúng phần "phải cung cấp" hoặc phần "phải tránh", nhưng bỏ sót phần còn lại.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Chỉ ra loại lỗi mà benchmark một chính sách bỏ sót. Hợp đồng xử lý giúp chấm điểm rõ ràng.
-- **Hạn chế (Limitations):** Dùng thế giới công ty mô phỏng, không phải dữ liệu tổ chức thật. Không đánh giá riêng miền hành chính công.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Cơ sở lý thuyết trực tiếp cho việc xử lý biến thể cấp Tỉnh (`_pick_province_variant`) và cấp Xã/Phường trong `service.py` của V10.5.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 2.2 (Regulatory Knowledge Base) & Section 3.3 (Authority Filtering)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "When a single request touches several organisational policies at once, chatbots fail far more often than single-policy benchmarks suggest, with a 33.1% error rate across 9 models (Liu et al., 2026). This motivates testing administrative assistants on questions that combine several constraints in one turn."
+- **Phương pháp:** Rail lập trình bằng Colang; topical/execution rails (fact-check, hallucination, moderation)
+- **Dữ liệu:** Banking (231 mẫu), Anthropic Red-Teaming/Helpful, MS MARCO, 20 câu tiền đề sai
+- **Thước đo:** Accuracy, tỷ lệ chặn/cho qua
+- **Kết quả chính:** Chặn gần 99% prompt có hại, 2% hữu ích; hallucination rail 65% → 95%.
+- **Hạn chế:** Độ trễ/chi phí ~3 lần; rail dựa LLM không tất định.
+- **Áp dụng cho Sys_3_4:** Tham chiếu gần nhất cho tầng policy của Sys_3_4.
 
 ---
 
-## Nhóm 2: RAG Cho Hỏi Đáp Pháp Luật, Quy Định & Thủ Tục (Legal & Regulatory RAG)
+## Nhóm 02: Legal & Regulatory RAG — RAG cho pháp lý và quy định
 
-### 5. LegalCheck: Retrieval- and Context-Augmented Generation for Drafting Municipal Legal Advice Letters
+### 05. LegalCheck: Retrieval- and Context-Augmented Generation for Drafting Municipal Legal Advice Letters
 - **Tác giả:** Virgill van der Meer (Municipality of Amsterdam), Julien Rossi (University of Amsterdam)
-- **Năm xuất bản:** 2026
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2605.12012 [cs.AI]; bản PDF ghi ICAIL 2026*
-- **Phân loại nghiên cứu:** `Primary Architecture & Case Study`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2605.12012](https://arxiv.org/abs/2605.12012)
-- **Tệp toàn văn (PDF bản gốc):** [`LegalCheck - Retrieval- and Context-Augmented Generation for Drafting Municipal Legal Advice Letters.pdf`](02_Legal_Regulatory_RAG/05_vanderMeer_2026_LegalCheck_Municipal_Advice/LegalCheck%20-%20Retrieval-%20and%20Context-Augmented%20Generation%20for%20Drafting%20Municipal%20Legal%20Advice%20Letters.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](02_Legal_Regulatory_RAG/05_vanderMeer_2026_LegalCheck_Municipal_Advice/literature_review.md)
+- **Năm:** 2026
+- **Nguồn công bố:** Proceedings of the 21st International Conference on Artificial Intelligence and Law (ICAIL 2026), Singapore, 8–12/6/2026 — short paper, hội nghị có bình duyệt (ACM/IAAIL). Trang arXiv ghi “Accepted at ICAIL 2026 as Short Paper”.
+- **DOI / Link:** [https://arxiv.org/abs/2605.12012](https://arxiv.org/abs/2605.12012)
+- **Tệp toàn văn:** [`LegalCheck - Retrieval- and Context-Augmented Generation for Drafting Municipal Legal Advice Letters.pdf`](02_Legal_Regulatory_RAG/05_vanderMeer_2026_LegalCheck_Municipal_Advice/LegalCheck%20-%20Retrieval-%20and%20Context-Augmented%20Generation%20for%20Drafting%20Municipal%20Legal%20Advice%20Letters.pdf)
+- **Tóm tắt chi tiết:** [`paper_07.md`](../../02_related_work/paper_summaries/paper_07.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-Phòng pháp chế của chính quyền Hà Lan thiếu nhân sự, số hồ sơ tăng và áp lực tuân thủ lớn. Soạn thư trả lời khiếu nại (objection response letters) tốn nhiều giờ.
+**Tổng quan.** LegalCheck là hệ thống soạn thảo thư tư vấn pháp lý cho các đơn khiếu nại (bezwaar) của công dân tại phòng pháp chế thành phố Amsterdam. Hệ thống kết hợp RAG (truy xuất thư tư vấn cũ và văn bản quy phạm) với CAG (Context-Augmented Generation): đưa hồ sơ vụ việc, kết luận dự kiến do chuyên viên chọn và phản hồi của chuyên viên vào nhiều vòng sinh. Trong thí điểm 6 tháng, 81% nội dung bản nháp AI được giữ nguyên trong thư cuối cùng, và tổng thời gian xử lý giảm 50–70% với các vụ đơn giản.
 
-Câu hỏi nghiên cứu: *LLM kết hợp truy xuất có soạn được thư tư vấn pháp lý gần hoàn chỉnh, nhất quán và giải thích được cho một chính quyền thành phố không?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-LegalCheck kết hợp Retrieval-Augmented Generation (RAG) và Context-Augmented Generation (CAG):
-
-- Truy xuất luật và các thư/vụ việc trước đó từ kho tri thức pháp lý được tuyển chọn.
-- Prompt có kiểm soát đưa cả tri thức ngoài lẫn chi tiết của hồ sơ cụ thể vào bản nháp theo cấu trúc thư: giới thiệu, nội dung khiếu nại, phần giải thích pháp lý, kết luận.
-- Chuyên gia pháp lý duyệt mọi bản nháp (expert-in-the-loop).
-
-#### Kết quả thực nghiệm chính
-Triển khai thực tế tại Municipality of Amsterdam: thư gần hoàn chỉnh được soạn trong vài phút thay vì vài giờ.
-
-- Bản nháp thường nắm được 80–100% nội dung pháp lý cốt lõi và hay dẫn chiếu điều khoản hoặc lập luận của vụ việc tương tự.
-- Người dùng pháp lý đánh giá hệ thống giảm khối lượng công việc và giúp áp dụng chuẩn pháp lý nhất quán hơn, không thay thế phán đoán của con người.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Triển khai thật trong cơ quan chính quyền, có người dùng chuyên môn đánh giá. Đầu ra dựa trên văn bản và tiền lệ thật nên giải thích được.
-- **Hạn chế (Limitations):** Đánh giá chủ yếu định tính, quy mô nhỏ. Cần chuyên gia duyệt từng thư.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Trực tiếp hỗ trợ thiết kế thuật toán phân cấp thẩm quyền `_authority_level` (Xã > Huyện > Tỉnh > Trung ương) trong V10.5.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.3 (Authority Level Hierarchical Ranking)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "In a real municipal deployment, grounding generation in retrieved regulations and prior decisions produced near-final legal advice letters in minutes, with legal experts keeping the final review (van der Meer & Rossi, 2026). Likewise, our assistant grounds answers in official procedure records rather than in the model's parametric knowledge."
+- **Phương pháp:** Retrieval- và Context-Augmented Generation soạn thư tư vấn pháp lý
+- **Dữ liệu:** ~23.500 thư 2022–2025, 4 lĩnh vực xử phạt
+- **Thước đo:** Recall, Precision, F1, tỷ lệ giữ lại, thời gian
+- **Kết quả chính:** F1 92%; tiết kiệm 92% thời gian soạn thảo; giảm 50–70% tổng thời gian.
+- **Hạn chế:** Một cơ quan, nhóm người dùng nhỏ; phụ thuộc LLM bên thứ ba.
+- **Áp dụng cho Sys_3_4:** Ví dụ triển khai thực tế ở chính quyền địa phương có người kiểm duyệt.
 
 ---
 
-### 6. LegalBench-RAG: A Benchmark for Retrieval-Augmented Generation in the Legal Domain
+### 06. LegalBench-RAG: A Benchmark for Retrieval-Augmented Generation in the Legal Domain
 - **Tác giả:** Nicholas Pipitone, Ghita Houir Alami (ZeroEntropy)
-- **Năm xuất bản:** 2024
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2408.10343 [cs.AI]*
-- **Phân loại nghiên cứu:** `Standard Benchmark & Evaluation Methodology`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2408.10343](https://arxiv.org/abs/2408.10343)
-- **Tệp toàn văn (PDF bản gốc):** [`LegalBench-RAG - A Benchmark for Retrieval-Augmented Generation in the Legal Domain.pdf`](02_Legal_Regulatory_RAG/06_Pipitone_2024_LegalBench-RAG/LegalBench-RAG%20-%20A%20Benchmark%20for%20Retrieval-Augmented%20Generation%20in%20the%20Legal%20Domain.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](02_Legal_Regulatory_RAG/06_Pipitone_2024_LegalBench-RAG/literature_review.md)
+- **Năm:** 2024
+- **Nguồn công bố:** arXiv preprint arXiv:2408.10343 [cs.AI] — **chưa có công bố tại hội nghị/tạp chí có bình duyệt** tại thời điểm kiểm tra. Nhóm giữ lại vì đây là benchmark truy xuất pháp lý mở, được cộng đồng RAG pháp lý sử dụng và trích dẫn rộng rãi; dữ liệu nguồn (CUAD, MAUD, ContractNLI, PrivacyQA, LegalBench) đều là các bộ dữ liệu đã công bố có bình duyệt.
+- **DOI / Link:** [https://arxiv.org/abs/2408.10343](https://arxiv.org/abs/2408.10343)
+- **Tệp toàn văn:** [`LegalBench-RAG - A Benchmark for Retrieval-Augmented Generation in the Legal Domain.pdf`](02_Legal_Regulatory_RAG/06_Pipitone_2024_LegalBench-RAG/LegalBench-RAG%20-%20A%20Benchmark%20for%20Retrieval-Augmented%20Generation%20in%20the%20Legal%20Domain.pdf)
+- **Tóm tắt chi tiết:** [`paper_08.md`](../../02_related_work/paper_summaries/paper_08.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-LegalBench đo khả năng sinh của LLM trong pháp lý, nhưng chưa có benchmark riêng cho bước truy xuất của hệ RAG pháp lý.
+**Tổng quan.** Bài báo giới thiệu LegalBench-RAG, benchmark đầu tiên (theo tác giả) chuyên đánh giá bước *truy xuất* của pipeline RAG trong miền pháp lý. Benchmark yêu cầu truy xuất chính xác các đoạn văn ngắn (span ký tự) thay vì chỉ ID văn bản hay đoạn lớn. Bộ dữ liệu gồm khoảng 6.858–6.889 cặp truy vấn–đáp án (bài báo ghi cả hai con số) trên kho gần 80 triệu ký tự (714 văn bản), kèm phiên bản rút gọn LegalBench-RAG-mini (776 truy vấn). Thí nghiệm mẫu cho thấy chia đoạn RCTS không rerank cho kết quả tốt nhất, và reranker tổng quát của Cohere làm kết quả kém đi.
 
-Câu hỏi nghiên cứu: *Hệ RAG có tìm được đúng đoạn văn bản pháp lý ngắn và chính xác cần để trả lời không?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-Tác giả xây benchmark truy xuất bằng cách lần ngược ngữ cảnh của các câu hỏi LegalBench về vị trí gốc trong kho văn bản:
-
-- 6.858 cặp hỏi–đáp trên kho hơn 79 triệu ký tự, do chuyên gia pháp lý gán nhãn; lấy từ 4 bộ PrivacyQA, CUAD, MAUD và ContractNLI.
-- Đo Precision@k và Recall@k ở mức đoạn trích (snippet) thay vì mức tài liệu; kèm bản nhẹ LegalBench-RAG-mini.
-- Thử 2 cách cắt đoạn (cố định 500 ký tự; Recursive Character Text Splitter) và 2 cách hậu xử lý (không rerank; Cohere reranker), với embedding text-embedding-3-large.
-
-#### Kết quả thực nghiệm chính
-Cắt đoạn bằng Recursive Character Text Splitter và không dùng reranker cho precision và recall cao nhất.
-
-- Cohere reranker (mô hình đa dụng) lại cho kết quả kém hơn không rerank; tác giả cho rằng văn bản pháp lý khác miền mà reranker được huấn luyện.
-- Precision tuyệt đối thấp, ví dụ PrivacyQA với cách cắt cố định chỉ đạt khoảng 14% ở k=1: truy xuất đúng đoạn pháp lý vẫn khó.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Benchmark đầu tiên tập trung vào bước truy xuất trong pháp lý, nhãn do chuyên gia gán. Công khai dữ liệu (github.com/zeroentropy-cc/legalbenchrag).
-- **Hạn chế (Limitations):** Văn bản hợp đồng và chính sách quyền riêng tư tiếng Anh, không phải thủ tục hành chính. Chỉ thử một mô hình embedding và một reranker.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Luận chứng khoa học then chốt chứng minh vì sao V10.5 không dùng vector search đơn thuần mà phải dùng FTS5 BM25 kết hợp F1 token overlap và exact phrase match.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 2.1 (Retrieval in Regulatory Domains) & Section 3.4 (Hybrid Retrieval)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Retrieval precision is the bottleneck of legal RAG: on LegalBench-RAG a strong embedding model rarely returns the exact supporting snippet, and a general-purpose reranker hurt rather than helped (Pipitone & Houir Alami, 2024). We therefore evaluate retrieval separately from answer generation."
+- **Phương pháp:** Benchmark truy hồi đoạn chính xác trong văn bản pháp lý
+- **Dữ liệu:** ContractNLI, CUAD, MAUD, PrivacyQA (6.889 truy vấn)
+- **Thước đo:** Precision@k, Recall@k
+- **Kết quả chính:** Recall@64 tối đa 76,39% (chia cố định); rerank Cohere không cải thiện.
+- **Hạn chế:** Chỉ hợp đồng/chính sách; có điểm không nhất quán nội bộ.
+- **Áp dụng cho Sys_3_4:** Gợi ý đánh giá truy hồi ở mức đoạn/trường.
 
 ---
 
-### 7. CanLegalRAGBench: Evaluating Retrieval-Augmented Generation on Canadian Case Law
-- **Tác giả:** Ethan Zhao, Maksym Taranukhin, Wei Cui, Moira Aikenhead, Vered Shwartz (University of British Columbia; Vector Institute)
-- **Năm xuất bản:** 2026
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2605.30497 [cs.CL]*
-- **Phân loại nghiên cứu:** `Benchmark & Legal RAG Evaluation`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2605.30497](https://arxiv.org/abs/2605.30497)
-- **Tệp toàn văn (PDF bản gốc):** [`CanLegalRAGBench - Evaluating Retrieval-Augmented Generation on Canadian Case Law.pdf`](02_Legal_Regulatory_RAG/07_Zhao_2026_CanLegalRAGBench/CanLegalRAGBench%20-%20Evaluating%20Retrieval-Augmented%20Generation%20on%20Canadian%20Case%20Law.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](02_Legal_Regulatory_RAG/07_Zhao_2026_CanLegalRAGBench/literature_review.md)
+### 07. Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools
+- **Tác giả:** Varun Magesh, Faiz Surani, Matthew Dahl, Mirac Suzgun, Christopher D. Manning, Daniel E. Ho (Stanford University; Yale University)
+- **Năm:** 2025
+- **Nguồn công bố:** Journal of Empirical Legal Studies, Vol. 22, No. 2 (2025), trang 216–242 (Wiley/Cornell Law School) — tạp chí có bình duyệt, open access
+- **DOI / Link:** [https://doi.org/10.1111/jels.12413](https://doi.org/10.1111/jels.12413)
+- **Tệp toàn văn:** [`Hallucination-Free - Assessing the Reliability of Leading AI Legal Research Tools.pdf`](02_Legal_Regulatory_RAG/07_Magesh_2025_Hallucination-Free_Legal_AI_Tools/Hallucination-Free%20-%20Assessing%20the%20Reliability%20of%20Leading%20AI%20Legal%20Research%20Tools.pdf)
+- **Tóm tắt chi tiết:** [`paper_09.md`](../../02_related_work/paper_summaries/paper_09.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-Trợ lý pháp lý dựa trên RAG vẫn bịa; nhiều benchmark dùng câu hỏi tổng hợp thay vì tình huống thật; luật Canada ít được đánh giá.
+**Tổng quan.** Bài báo là đánh giá thực nghiệm *có đăng ký trước* (preregistered) đầu tiên đối với các công cụ nghiên cứu pháp lý thương mại dựa trên RAG: Lexis+ AI (LexisNexis), Westlaw AI-Assisted Research và Ask Practical Law AI (Thomson Reuters), so với GPT-4. Tác giả đề xuất khung phân loại ảo giác theo hai chiều *tính đúng* (correctness) và *tính có căn cứ* (groundedness). Kết luận: các công cụ RAG thương mại ít ảo giác hơn GPT-4 nhưng vẫn ảo giác khoảng 17%–33% số câu hỏi, trái với tuyên bố “không ảo giác” của nhà cung cấp.
 
-Câu hỏi nghiên cứu: *Hệ RAG trả lời câu hỏi pháp lý thực tế dựa trên án lệ Canada tốt đến đâu, và lỗi nằm ở bước truy xuất hay bước sinh?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-CanLegalRAGBench là benchmark hỏi đáp pháp lý Canada với câu hỏi sát thực tế và đáp án do chuyên gia gán, dựa trên án lệ:
-
-- Sinh câu hỏi theo persona từ các bản án, lọc bằng LLM-judge, tạo biến thể câu hỏi có kiểm soát.
-- Đánh giá truy xuất với nhiều cách cắt đoạn, nhiều mô hình embedding và các phương pháp FAISS, BM25, hybrid.
-- Đánh giá câu trả lời sinh ra so với đáp án chuẩn và theo mức được tài liệu truy xuất hỗ trợ.
-- Mã và dữ liệu: github.com/NLP-UBC/CanLegalRAGBench.
-
-#### Kết quả thực nghiệm chính
-Kết quả truy xuất nhạy với các lựa chọn thiết kế; embedding mã nguồn mở cạnh tranh được với embedding đóng.
-
-- Đánh giá tự động phạt oan hệ thống khi truy xuất được tài liệu liên quan nhưng khác tài liệu gốc.
-- Câu trả lời thường lệch đáp án chuẩn, do bịa hoặc do quá chi tiết/lạc đề; 8–29% claim không được tài liệu truy xuất hỗ trợ.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Câu hỏi sát thực tế, đáp án do chuyên gia gán. Tách lỗi truy xuất và lỗi sinh; đo tỉ lệ claim không có căn cứ.
-- **Hạn chế (Limitations):** Án lệ Canada (common law), khác văn bản thủ tục hành chính. Chính tác giả chỉ ra hạn chế của đánh giá tự động.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Cơ sở phương pháp luận cho việc bóc tách CSDL 1.350 thủ tục của V10.5 thành các trường facet riêng biệt: `checklists`, `fees`, `authority`, `receiving_location`.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.4 (Structured Facet Indexing)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Even with retrieval, 8–29% of the claims in legal RAG answers are not supported by the retrieved documents (Zhao et al., 2026). This motivates a post-generation check that each factual statement is backed by a retrieved source."
+- **Phương pháp:** Đánh giá thực nghiệm công cụ RAG pháp lý thương mại
+- **Dữ liệu:** 202 truy vấn pháp lý Hoa Kỳ đăng ký trước
+- **Thước đo:** Tỷ lệ ảo giác, chính xác, đầy đủ
+- **Kết quả chính:** Lexis+ AI và Practical Law ảo giác >1/6, Westlaw ~1/3 dù dùng RAG.
+- **Hạn chế:** Ba sản phẩm, ảnh chụp tại một thời điểm, 202 câu.
+- **Áp dụng cho Sys_3_4:** Bằng chứng RAG không loại bỏ ảo giác pháp lý → cần verifier.
 
 ---
 
-### 8. HyPA-RAG: A Hybrid Parameter Adaptive Retrieval-Augmented Generation System for AI Legal and Policy Applications
+### 08. HyPA-RAG: A Hybrid Parameter Adaptive Retrieval-Augmented Generation System for AI Legal and Policy Applications
 - **Tác giả:** Rishi Kalra, Zekun Wu, Ayesha Gulley, Airlie Hilliard, Xin Guan, Adriano Koshiyama, Philip Treleaven (Holistic AI; University College London)
-- **Năm xuất bản:** 2024
-- **Tạp chí / Hội nghị:** *NAACL 2025 Industry Track & EMNLP 2024 CustomNLP4U Workshop / arXiv:2409.09046 [cs.IR]*
-- **Phân loại nghiên cứu:** `Primary Architecture & Adaptive Algorithm`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2409.09046](https://arxiv.org/abs/2409.09046)
-- **Tệp toàn văn (PDF bản gốc):** [`HyPA-RAG - A Hybrid Parameter Adaptive Retrieval-Augmented Generation System for AI Legal and Policy Applications.pdf`](02_Legal_Regulatory_RAG/08_Kalra_2024_HyPA-RAG_Legal_Policy/HyPA-RAG%20-%20A%20Hybrid%20Parameter%20Adaptive%20Retrieval-Augmented%20Generation%20System%20for%20AI%20Legal%20and%20Policy%20Applications.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](02_Legal_Regulatory_RAG/08_Kalra_2024_HyPA-RAG_Legal_Policy/literature_review.md)
+- **Năm:** 2025 (preprint đầu tiên 9/2024)
+- **Nguồn công bố:** Proceedings of NAACL 2025 – Industry Track, ACL Anthology (2025.naacl-industry.79) — hội nghị có bình duyệt
+- **DOI / Link:** [https://aclanthology.org/2025.naacl-industry.79/](https://aclanthology.org/2025.naacl-industry.79/)
+- **Tệp toàn văn:** [`HyPA-RAG - A Hybrid Parameter Adaptive Retrieval-Augmented Generation System for AI Legal and Policy Applications.pdf`](02_Legal_Regulatory_RAG/08_Kalra_2024_HyPA-RAG_Legal_Policy/HyPA-RAG%20-%20A%20Hybrid%20Parameter%20Adaptive%20Retrieval-Augmented%20Generation%20System%20for%20AI%20Legal%20and%20Policy%20Applications.pdf)
+- **Tóm tắt chi tiết:** [`paper_10.md`](../../02_related_work/paper_summaries/paper_10.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-Trong pháp lý và chính sách AI, LLM gặp kiến thức lỗi thời, ảo giác và suy luận kém. RAG giúp được, nhưng vẫn lỗi truy xuất, ghép ngữ cảnh kém và tốn chi phí vận hành.
+**Tổng quan.** Bài báo đề xuất HyPA-RAG cho hỏi đáp chính sách và pháp luật về AI, lấy Luật địa phương số 144 của New York (LL144, về công cụ ra quyết định tuyển dụng tự động) làm tình huống thử nghiệm. Hệ thống gồm: bộ phân loại độ phức tạp truy vấn để chọn tham số truy xuất thích ứng; truy xuất lai dense + sparse (BM25) + đồ thị tri thức (knowledge graph); và khung đánh giá với các loại câu hỏi riêng. Kết quả: cấu hình thích ứng tốt nhất đạt Faithfulness 0,9044 (so với 0,8480 của cấu hình top-k cố định tốt nhất); trong ablation, Correctness cao nhất đạt 0,8402.
 
-Câu hỏi nghiên cứu: *Có thể điều chỉnh tham số truy xuất theo độ phức tạp của từng câu hỏi để vừa chính xác vừa tiết kiệm không?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-HyPA-RAG (Hybrid Parameter-Adaptive RAG) được thử trên luật NYC Local Law 144 (LL144) về công cụ tuyển dụng tự động:
-
-- Bộ phân loại độ phức tạp câu hỏi chọn tham số truy xuất (như số đoạn truy xuất) cho từng câu.
-- Truy xuất lai kết hợp dense, sparse (từ khoá) và knowledge graph.
-- Khung đánh giá riêng với các loại câu hỏi và chỉ số thiết kế cho miền luật.
-
-#### Kết quả thực nghiệm chính
-Trên LL144, HyPA-RAG cải thiện độ chính xác truy xuất, độ trung thành của câu trả lời và độ chính xác ngữ cảnh so với RAG dùng tham số cố định.
-
-- Số liệu chi tiết theo từng loại câu hỏi và từng chỉ số nằm trong các bảng của bài.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Điều chỉnh chi phí truy xuất theo từng câu thay vì một cấu hình chung. Kết hợp ba kiểu truy xuất bổ trợ nhau.
-- **Hạn chế (Limitations):** Chỉ thử trên một văn bản luật (LL144). Cần huấn luyện bộ phân loại độ phức tạp.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Cung cấp nền tảng lý thuyết cho giải thuật xếp hạng đa tiêu chí trong `service.py`: Exact Phrase Match -> F1 Coverage -> Cấp thẩm quyền -> BM25.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.4 (FTS5 + Exact Match Reranking)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Adapting retrieval parameters to query complexity and combining dense, sparse and knowledge-graph retrieval improves retrieval accuracy and answer fidelity on legal-policy QA (Kalra et al., 2024)."
+- **Phương pháp:** Phân loại độ phức tạp → điều chỉnh tham số truy hồi lai + KG
+- **Dữ liệu:** LL144 (15 trang), bộ câu hỏi sinh bằng GPT-3.5/Giskard
+- **Thước đo:** Correctness, Faithfulness, Context Precision/Recall
+- **Kết quả chính:** DistilBERT phân loại F1 0,90; LLM không truy hồi Correctness chỉ 0,20–0,46.
+- **Hạn chế:** Một người chấm; một văn bản luật.
+- **Áp dụng cho Sys_3_4:** Ý tưởng điều chỉnh top-k theo độ phức tạp câu hỏi.
 
 ---
 
-## Nhóm 3: Kiểm Chứng, Verifier & Giảm Ảo Giác Trong RAG (Fact-Checking & Verifiers)
+## Nhóm 03: Fact-Checking & Verifiers — Kiểm chứng sự thật và đo ảo giác
 
-### 9. Chain-of-Verification (CoVe) Reduces Hallucination in Large Language Models
+### 09. Chain-of-Verification Reduces Hallucination in Large Language Models (CoVe)
 - **Tác giả:** Shehzaad Dhuliawala, Mojtaba Komeili, Jing Xu, Roberta Raileanu, Xian Li, Asli Celikyilmaz, Jason Weston (Meta AI; ETH Zürich)
-- **Năm xuất bản:** 2023
-- **Tạp chí / Hội nghị:** *Findings of the Association for Computational Linguistics (ACL 2024) / arXiv:2309.11495 [cs.CL]*
-- **Phân loại nghiên cứu:** `Foundational Methodology & Algorithm`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2309.11495](https://arxiv.org/abs/2309.11495)
-- **Tệp toàn văn (PDF bản gốc):** [`Chain-of-Verification (CoVe) Reduces Hallucination in Large Language Models.pdf`](03_Fact-Checking_Verifiers/09_Dhuliawala_2023_Chain-of-Verification_CoVe/Chain-of-Verification%20%28CoVe%29%20Reduces%20Hallucination%20in%20Large%20Language%20Models.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](03_Fact-Checking_Verifiers/09_Dhuliawala_2023_Chain-of-Verification_CoVe/literature_review.md)
+- **Năm:** 2024 (preprint 9/2023)
+- **Nguồn công bố:** Findings of the Association for Computational Linguistics: ACL 2024 — hội nghị có bình duyệt, ACL Anthology
+- **DOI / Link:** [https://aclanthology.org/2024.findings-acl.212/](https://aclanthology.org/2024.findings-acl.212/)
+- **Tệp toàn văn:** [`Chain-of-Verification (CoVe) Reduces Hallucination in Large Language Models.pdf`](03_Fact-Checking_Verifiers/09_Dhuliawala_2023_Chain-of-Verification_CoVe/Chain-of-Verification%20%28CoVe%29%20Reduces%20Hallucination%20in%20Large%20Language%20Models.pdf)
+- **Tóm tắt chi tiết:** [`paper_13.md`](../../02_related_work/paper_summaries/paper_13.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-LLM sinh thông tin sai nhưng nghe hợp lý (ảo giác), nhất là với sự kiện ít gặp và khi sinh văn bản dài.
+**Tổng quan.** Bài báo đề xuất Chain-of-Verification (CoVe): LLM (1) soạn câu trả lời nháp, (2) tự lập danh sách câu hỏi kiểm chứng, (3) trả lời các câu hỏi đó một cách độc lập để không bị câu trả lời nháp chi phối, và (4) sinh câu trả lời cuối đã kiểm chứng. Trên Llama 65B, CoVe tăng gấp đôi precision ở câu hỏi dạng danh sách Wikidata (0,17 → 0,36), tăng F1 trên MultiSpanQA từ 0,39 lên 0,48 và tăng FactScore khi sinh tiểu sử từ 55,9 lên 71,4.
 
-Câu hỏi nghiên cứu: *Mô hình có tự kiểm tra và sửa câu trả lời của chính nó được không?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-Chain-of-Verification (CoVe) gồm 4 bước:
-
-- (i) Sinh bản nháp.
-- (ii) Lập các câu hỏi kiểm chứng cho bản nháp.
-- (iii) Trả lời từng câu hỏi kiểm chứng một cách độc lập để không bị bản nháp dẫn dắt (bản "factored" tách riêng từng câu).
-- (iv) Viết câu trả lời cuối đã kiểm chứng.
-
-#### Kết quả thực nghiệm chính
-CoVe giảm ảo giác trên câu hỏi dạng danh sách từ Wikidata, MultiSpanQA sách đóng và sinh tiểu sử dài.
-
-- Wikidata (Llama 65B): precision tăng từ 0.17 (few-shot) lên 0.36 (CoVe two-step).
-- MultiSpanQA: F1 tăng từ 0.39 lên 0.48 (CoVe factored).
-- Sinh văn bản dài: FactScore tăng từ 55.9 lên 71.4 (+28%).
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Không cần huấn luyện, áp dụng cho mô hình có sẵn. Trả lời câu hỏi kiểm chứng độc lập giúp không lặp lại lỗi của bản nháp.
-- **Hạn chế (Limitations):** Tăng số lượt gọi LLM và độ trễ. Kiểm chứng vẫn dựa trên kiến thức của chính mô hình, không có nguồn ngoài.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Nguồn gốc lý thuyết trực tiếp cho module `Backend/core/verifier.py` trong V10.5 thực hiện vòng thẩm định độc lập trước khi gửi câu trả lời.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.5 (Fact Verification & Guardrails)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Verifying a draft through independently answered verification questions reduces hallucination in list questions, closed-book QA and long-form generation (Dhuliawala et al., 2023)."
+- **Phương pháp:** Lập kế hoạch câu hỏi kiểm chứng → trả lời độc lập → sửa
+- **Dữ liệu:** Wikidata, Wiki-Category, MultiSpanQA, tiểu sử
+- **Thước đo:** Precision, F1, FActScore
+- **Kết quả chính:** Precision Wikidata 0,17 → 0,36; FActScore 55,9 → 71,4.
+- **Hạn chế:** Không loại bỏ hoàn toàn ảo giác; tăng chi phí sinh.
+- **Áp dụng cho Sys_3_4:** Ý tưởng kiểm chứng từng điểm sau sinh (verify_point).
 
 ---
 
 ### 10. Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection
 - **Tác giả:** Akari Asai, Zeqiu Wu, Yizhong Wang, Avirup Sil, Hannaneh Hajishirzi (University of Washington; Allen Institute for AI; IBM Research AI)
-- **Năm xuất bản:** 2024
-- **Tạp chí / Hội nghị:** *International Conference on Learning Representations (ICLR 2024 Oral) / arXiv:2310.11511 [cs.CL]*
-- **Phân loại nghiên cứu:** `Foundational Model Framework`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2310.11511](https://arxiv.org/abs/2310.11511)
-- **Tệp toàn văn (PDF bản gốc):** [`Self-RAG - Learning to Retrieve, Generate, and Critique through Self-Reflection.pdf`](03_Fact-Checking_Verifiers/10_Asai_2024_Self-RAG_Reflection_Critique/Self-RAG%20-%20Learning%20to%20Retrieve%2C%20Generate%2C%20and%20Critique%20through%20Self-Reflection.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](03_Fact-Checking_Verifiers/10_Asai_2024_Self-RAG_Reflection_Critique/literature_review.md)
+- **Năm:** 2024 (preprint 10/2023)
+- **Nguồn công bố:** The Twelfth International Conference on Learning Representations (ICLR 2024), báo cáo oral — hội nghị hàng đầu, có bình duyệt (OpenReview)
+- **DOI / Link:** [https://proceedings.iclr.cc/paper_files/paper/2024/hash/25f7be9694d7b32d5cc670927b8091e1-Abstract-Conference.html](https://proceedings.iclr.cc/paper_files/paper/2024/hash/25f7be9694d7b32d5cc670927b8091e1-Abstract-Conference.html)
+- **Tệp toàn văn:** [`Self-RAG - Learning to Retrieve, Generate, and Critique through Self-Reflection.pdf`](03_Fact-Checking_Verifiers/10_Asai_2024_Self-RAG_Reflection_Critique/Self-RAG%20-%20Learning%20to%20Retrieve%2C%20Generate%2C%20and%20Critique%20through%20Self-Reflection.pdf)
+- **Tóm tắt chi tiết:** [`paper_14.md`](../../02_related_work/paper_summaries/paper_14.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-RAG thường truy xuất một số đoạn cố định bất kể có cần truy xuất hay đoạn có liên quan không, làm giảm tính linh hoạt hoặc sinh câu trả lời kém hữu ích.
+**Tổng quan.** Self-RAG huấn luyện một LLM duy nhất vừa sinh văn bản vừa sinh *token phản tư* (reflection tokens) để tự quyết định khi nào cần truy xuất, đánh giá đoạn văn truy xuất có liên quan không, câu trả lời có được đoạn văn hỗ trợ không, và câu trả lời có hữu ích không. Với Llama2 7B/13B, Self-RAG vượt các LLM và mô hình RAG mã nguồn mở trên sáu tác vụ, và vượt ChatGPT ở PubHealth, PopQA, sinh tiểu sử và ở độ chính xác trích dẫn (citation precision) trên ASQA.
 
-Câu hỏi nghiên cứu: *Mô hình có tự quyết định khi nào cần truy xuất, và tự phê bình đoạn truy xuất lẫn câu trả lời của mình không?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-Self-RAG huấn luyện một LM duy nhất sinh các reflection token:
-
-- `Retrieve`: có cần truy xuất không.
-- `ISREL`: đoạn truy xuất có liên quan không.
-- `ISSUP`: câu sinh ra có được đoạn truy xuất hỗ trợ không.
-- `ISUSE`: câu trả lời hữu ích đến đâu.
-- Reflection token cho phép điều khiển hành vi lúc suy luận theo yêu cầu của từng tác vụ.
-
-#### Kết quả thực nghiệm chính
-Self-RAG (7B và 13B) vượt ChatGPT và Llama2-chat có truy xuất trên hỏi đáp mở, suy luận và kiểm chứng sự thật.
-
-- Cải thiện rõ tính đúng sự thật và độ chính xác trích dẫn ở văn bản dài so với các mô hình trên.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Truy xuất theo nhu cầu thay vì luôn truy xuất. Tự đánh giá mức hỗ trợ bằng chứng cho từng đoạn sinh ra.
-- **Hạn chế (Limitations):** Phải huấn luyện mô hình với token đặc biệt; không áp dụng trực tiếp cho mô hình có sẵn. Chỉ thử trên tiếng Anh.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Cơ sở thiết kế cho bộ Gatekeeper phân loại ý định (`intent.py`: chitchat/out_of_scope/procedure) và quy tắc kiểm chứng bằng chứng trong V10.5.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.2 (System 1 vs System 2 Routing)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Deciding when to retrieve, and checking whether each generated segment is supported by the retrieved passage, improves factuality and citation accuracy (Asai et al., 2024). We apply these two checks with rules and prompts instead, since our 1.5B model is not fine-tuned."
+- **Phương pháp:** Huấn luyện LLM sinh reflection token quyết định truy hồi và tự phê bình
+- **Dữ liệu:** 150K mẫu huấn luyện; PopQA, PubHealth, ARC, TriviaQA, ASQA, tiểu sử
+- **Thước đo:** Accuracy, FactScore, citation precision/recall
+- **Kết quả chính:** Self-RAG 13B: PopQA 55,8; FactScore 80,2; citation precision 70,3.
+- **Hạn chế:** Cần huấn luyện lại mô hình.
+- **Áp dụng cho Sys_3_4:** Đối chứng giữa tự phê bình học được và verifier tất định.
 
 ---
 
 ### 11. CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing
 - **Tác giả:** Zhibin Gou, Zhihong Shao, Yeyun Gong, Yelong Shen, Yujiu Yang, Nan Duan, Weizhu Chen (Tsinghua University; Microsoft Research Asia; Microsoft Azure AI)
-- **Năm xuất bản:** 2024
-- **Tạp chí / Hội nghị:** *International Conference on Learning Representations (ICLR 2024) / arXiv:2305.11738 [cs.CL]*
-- **Phân loại nghiên cứu:** `Interactive Verification Architecture`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2305.11738](https://arxiv.org/abs/2305.11738)
-- **Tệp toàn văn (PDF bản gốc):** [`CRITIC - Large Language Models Can Self-Correct with Tool-Interactive Critiquing.pdf`](03_Fact-Checking_Verifiers/11_Gou_2024_CRITIC_Self-Correct_Tool_Interactive/CRITIC%20-%20Large%20Language%20Models%20Can%20Self-Correct%20with%20Tool-Interactive%20Critiquing.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](03_Fact-Checking_Verifiers/11_Gou_2024_CRITIC_Self-Correct_Tool_Interactive/literature_review.md)
+- **Năm:** 2024
+- **Nguồn công bố:** The Twelfth International Conference on Learning Representations (ICLR 2024) — hội nghị hàng đầu, có bình duyệt (bản PDF ghi “Published as a conference paper at ICLR 2024”)
+- **DOI / Link:** [https://proceedings.iclr.cc/paper_files/paper/2024/hash/fef126561bbf9d4467dbb8d27334b8fe-Abstract-Conference.html](https://proceedings.iclr.cc/paper_files/paper/2024/hash/fef126561bbf9d4467dbb8d27334b8fe-Abstract-Conference.html)
+- **Tệp toàn văn:** [`CRITIC - Large Language Models Can Self-Correct with Tool-Interactive Critiquing.pdf`](03_Fact-Checking_Verifiers/11_Gou_2024_CRITIC_Self-Correct_Tool_Interactive/CRITIC%20-%20Large%20Language%20Models%20Can%20Self-Correct%20with%20Tool-Interactive%20Critiquing.pdf)
+- **Tóm tắt chi tiết:** [`paper_15.md`](../../02_related_work/paper_summaries/paper_15.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-LLM đôi khi bịa, sinh code sai hoặc nội dung độc hại, trong khi con người thường dùng công cụ ngoài (công cụ tìm kiếm, trình thông dịch code) để kiểm tra.
+**Tổng quan.** CRITIC là khung “kiểm chứng rồi sửa” cho LLM hộp đen: từ câu trả lời ban đầu, LLM tương tác với công cụ ngoài (Google Search, trình thông dịch Python, Perspective API) để sinh lời phê bình, sau đó sửa câu trả lời dựa trên phê bình và lặp lại đến khi đạt điều kiện dừng. Không cần huấn luyện thêm, chỉ cần prompt few-shot. Với ChatGPT, CRITIC tăng trung bình 7,7 F1 trên ba bộ QA, tăng 7,0% tuyệt đối trên ba bộ toán, và giảm 79,2% xác suất sinh nội dung độc hại. Phát hiện then chốt: LLM tự sửa mà không có phản hồi từ bên ngoài chỉ cải thiện ít, thậm chí làm kết quả xấu đi.
 
-Câu hỏi nghiên cứu: *LLM dạng hộp đen có tự sửa đầu ra nhờ phản hồi từ công cụ ngoài không?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-CRITIC bắt đầu từ đầu ra ban đầu, gọi công cụ phù hợp để kiểm tra từng khía cạnh, rồi sửa đầu ra theo phản hồi; có thể lặp nhiều vòng:
-
-- Công cụ: công cụ tìm kiếm cho hỏi đáp, trình thông dịch code cho bài toán, API chấm độc hại cho giảm độc hại.
-- Plug-and-play, không huấn luyện lại mô hình.
-
-#### Kết quả thực nghiệm chính
-CRITIC cải thiện ổn định hiệu năng trên hỏi đáp tự do, tổng hợp chương trình giải toán và giảm nội dung độc hại.
-
-- Phản hồi từ công cụ ngoài là yếu tố quyết định: bản CRITIC không dùng công cụ (chỉ tự phê bình) cho kết quả kém hơn rõ.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Không cần huấn luyện. Dùng bằng chứng khách quan từ công cụ thay cho tự đánh giá.
-- **Hạn chế (Limitations):** Phụ thuộc độ trễ và độ sẵn sàng của công cụ ngoài. Nhiều vòng gọi LLM làm tăng chi phí.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Trực tiếp hỗ trợ thiết kế tương tác giữa Verifier và MCP Search / CSDL SQLite trong V10.5.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.5 (Tool-Interactive Grounding Guard)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Self-correction is reliable only when grounded in external feedback such as search results (Gou et al., 2024); accordingly, our verifier checks answers against retrieved web sources rather than relying on the model's self-assessment."
+- **Phương pháp:** Vòng xác minh → phê bình → sửa dùng công cụ ngoài
+- **Dữ liệu:** AmbigNQ, TriviaQA, HotpotQA, GSM8k, SVAMP, TabMWP, RealToxicityPrompts
+- **Thước đo:** F1, độ chính xác, độc hại
+- **Kết quả chính:** ChatGPT AmbigNQ F1 64,3 → 74,9; tự sửa không công cụ có thể làm kết quả xấu đi.
+- **Hạn chế:** Độ trễ tăng theo số vòng.
+- **Áp dụng cho Sys_3_4:** Củng cố việc kiểm chứng phải dựa vào nguồn ngoài (CSDL thủ tục), không tự phán.
 
 ---
 
-### 12. Detecting Hallucinations in Retrieval-Augmented Generation through Grounding-Aware Sensitivity by Perturbation (GASP)
-- **Tác giả:** Mohamed Aly Bouke (Multimedia University, Malaysia)
-- **Năm xuất bản:** 2026
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2607.04223 [cs.CL]*
-- **Phân loại nghiên cứu:** `Empirical Detection Methodology`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2607.04223](https://arxiv.org/abs/2607.04223)
-- **Tệp toàn văn (PDF bản gốc):** [`Detecting Hallucinations in Retrieval-Augmented Generation through Grounding-Aware Sensitivity by Perturbation (GASP).pdf`](03_Fact-Checking_Verifiers/12_Bouke_2026_GASP_Grounding_Aware_Sensitivity/Detecting%20Hallucinations%20in%20Retrieval-Augmented%20Generation%20through%20Grounding-Aware%20Sensitivity%20by%20Perturbation%20%28GASP%29.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](03_Fact-Checking_Verifiers/12_Bouke_2026_GASP_Grounding_Aware_Sensitivity/literature_review.md)
+### 12. RAGTruth: A Hallucination Corpus for Developing Trustworthy Retrieval-Augmented Language Models
+- **Tác giả:** Cheng Niu, Yuanhao Wu, Juno Zhu, Siliang Xu, Kashun Shum, Randy Zhong, Juntong Song, Tong Zhang (NewsBreak; University of Illinois Urbana-Champaign)
+- **Năm:** 2024
+- **Nguồn công bố:** Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024), Volume 1: Long Papers, trang 10862–10878 — hội nghị hàng đầu, có bình duyệt
+- **DOI / Link:** [https://aclanthology.org/2024.acl-long.585/](https://aclanthology.org/2024.acl-long.585/)
+- **Tệp toàn văn:** [`RAGTruth - A Hallucination Corpus for Developing Trustworthy Retrieval-Augmented Language Models.pdf`](03_Fact-Checking_Verifiers/12_Niu_2024_RAGTruth_Hallucination_Corpus/RAGTruth%20-%20A%20Hallucination%20Corpus%20for%20Developing%20Trustworthy%20Retrieval-Augmented%20Language%20Models.pdf)
+- **Tóm tắt chi tiết:** [`paper_16.md`](../../02_related_work/paper_summaries/paper_16.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-RAG giảm nhưng không loại bỏ ảo giác. Các bộ phát hiện hiện có chỉ cho một điểm cho cả câu trả lời, không chỉ ra câu nào không có căn cứ hay vì sao.
+**Tổng quan.** Bài báo xây dựng RAGTruth — kho dữ liệu khoảng 18.000 câu trả lời sinh tự nhiên bởi 6 LLM trong bối cảnh RAG, được người chú thích ảo giác ở mức câu trả lời và mức từ/đoạn (span), phân thành 4 loại. Tác giả đo tần suất ảo giác của các LLM, đánh giá các phương pháp phát hiện ảo giác hiện có, và cho thấy Llama-2-13B tinh chỉnh trên RAGTruth đạt F1 phát hiện mức câu trả lời 78,7% — cao hơn prompt GPT-4-turbo (63,4%).
 
-Câu hỏi nghiên cứu: *Làm sao xác định từng câu trong câu trả lời có dựa vào tài liệu truy xuất hay không?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-GASP (Grounding-Aware Sensitivity by Perturbation) là bộ phát hiện ở mức câu/span:
-
-- Giữ nguyên câu trả lời, chấm lại log-likelihood khi có đủ ngữ cảnh, khi không có ngữ cảnh và khi bỏ từng đoạn; đo mức giảm log-likelihood và Jensen-Shannon divergence.
-- Câu có căn cứ tụt likelihood mạnh khi bỏ đoạn hỗ trợ; câu bịa gần như không đổi.
-- Scorer là mô hình nhỏ: Qwen2.5-0.5B, Qwen2.5-1.5B, SmolLM2-1.7B; đánh giá trên RAGTruth, TofuEval và RAGBench.
-
-#### Kết quả thực nghiệm chính
-Trên RAGTruth, GASP đạt AUC khoảng 0.73 ở mức câu trả lời và khoảng 0.67 ở mức span, tốt hơn rõ perplexity, độ dài, NLI toàn ngữ cảnh và self-consistency.
-
-- Một ngưỡng không cần huấn luyện trên đặc trưng grounding cho kết quả ngang bộ phân loại có huấn luyện.
-- Tín hiệu chuyển được sang TofuEval nhưng không hiệu quả với câu trả lời ngắn của RAGBench: GASP hợp với câu trả lời dựng từ ngữ cảnh.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Chỉ ra từng câu không có căn cứ. Chạy với mô hình nhỏ, gồm cả Qwen2.5-1.5B là mô hình V10.5 đang dùng.
-- **Hạn chế (Limitations):** AUC ở mức vừa phải (0.67–0.73). Phải chấm lại nhiều lần (mỗi đoạn một lần); kém với câu trả lời ngắn.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Cơ sở khoa học cho cơ chế lọc output của V10.5: cắt bỏ phần danh sách sau dấu hai chấm `:` nếu không đối chiếu được với bảng CSDL gốc.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.5 (Post-generation Dossier Truncation)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Sentence-level grounding can be tested cheaply with a small scorer such as Qwen2.5-1.5B: a grounded sentence loses likelihood when its supporting passage is removed, while a hallucinated one barely changes (Bouke, 2026). Our lighter heuristic attaches a citation only when a sentence's keywords largely match a source."
+- **Phương pháp:** Kho chú thích ảo giác mức span cho đầu ra RAG
+- **Dữ liệu:** 2.965 mẫu, 17.790 câu trả lời, 14.289 span
+- **Thước đo:** Precision/Recall/F1 phát hiện ảo giác
+- **Kết quả chính:** 43,1% câu trả lời có ảo giác; data-to-text cao nhất (68,6%).
+- **Hạn chế:** Chỉ tiếng Anh; cần kiểm tra khả năng tổng quát.
+- **Áp dụng cho Sys_3_4:** Mô hình đánh giá ảo giác cho Friendly Engine; data-to-text tương tự bảng lệ phí.
 
 ---
 
-### 13. Multi-Modal Fact-Verification Framework for Reducing Hallucinations in Large Language Models
-- **Tác giả:** Piyushkumar Patel (Microsoft)
-- **Năm xuất bản:** 2025
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2510.22751 [cs.AI]*
-- **Phân loại nghiên cứu:** `System Framework & Cross-Verification`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2510.22751](https://arxiv.org/abs/2510.22751)
-- **Tệp toàn văn (PDF bản gốc):** [`Multi-Modal Fact-Verification Framework for Reducing Hallucinations in Large Language Models.pdf`](03_Fact-Checking_Verifiers/13_Patel_2025_Multi-Modal_Fact-Verification/Multi-Modal%20Fact-Verification%20Framework%20for%20Reducing%20Hallucinations%20in%20Large%20Language%20Models.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](03_Fact-Checking_Verifiers/13_Patel_2025_Multi-Modal_Fact-Verification/literature_review.md)
+### 13. FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation
+- **Tác giả:** Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike Lewis, Wen-tau Yih, Pang Wei Koh, Mohit Iyyer, Luke Zettlemoyer, Hannaneh Hajishirzi (University of Washington; UMass Amherst; Allen Institute for AI; Meta AI)
+- **Năm:** 2023
+- **Nguồn công bố:** Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing (EMNLP 2023), trang 12076–12100 — hội nghị hàng đầu, có bình duyệt
+- **DOI / Link:** [https://aclanthology.org/2023.emnlp-main.741/](https://aclanthology.org/2023.emnlp-main.741/)
+- **Tệp toàn văn:** [`FActScore - Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation.pdf`](03_Fact-Checking_Verifiers/13_Min_2023_FActScore_Atomic_Factuality/FActScore%20-%20Fine-grained%20Atomic%20Evaluation%20of%20Factual%20Precision%20in%20Long%20Form%20Text%20Generation.pdf)
+- **Tóm tắt chi tiết:** [`paper_17.md`](../../02_related_work/paper_summaries/paper_17.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-LLM tự tin sinh thông tin sai nghe hợp lý, cản trở việc dùng trong ứng dụng cần độ chính xác.
+**Tổng quan.** Bài báo đề xuất FActScore — thước đo độ chính xác sự kiện của văn bản dài, bằng cách tách văn bản thành các *sự kiện nguyên tử* (atomic facts) và tính tỷ lệ sự kiện được một nguồn tri thức đáng tin hỗ trợ. Đánh giá thủ công cho thấy InstructGPT, ChatGPT và PerplexityAI (có tìm kiếm) chỉ đạt lần lượt 42,5%, 58,3% và 71,5%. Tác giả xây dựng bộ ước lượng tự động có sai số dưới 2% so với người, và dùng nó đánh giá 6.500 văn bản của 13 đối tượng (chi phí tương đương 26.000 USD nếu thuê người chấm).
 
-Câu hỏi nghiên cứu: *Có thể phát hiện và sửa ảo giác ngay lúc sinh bằng cách đối chiếu nhiều nguồn tri thức không?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-Khung kiểm chứng đối chiếu các khẳng định của LLM với nhiều nguồn cùng lúc:
-
-- Nguồn: CSDL có cấu trúc, tìm kiếm web trực tiếp và tài liệu học thuật.
-- Khi phát hiện mâu thuẫn, hệ thống tự sửa mà vẫn giữ mạch văn của câu trả lời.
-
-#### Kết quả thực nghiệm chính
-Thử trên nhiều miền, khung giảm 67% ảo giác mà không giảm chất lượng câu trả lời.
-
-- Chuyên gia y tế, tài chính và nghiên cứu khoa học chấm 89% đầu ra đã sửa là đạt.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Kết hợp nguồn có cấu trúc và nguồn web, gần với thiết kế hai hệ của V10.5. Có chuyên gia miền đánh giá.
-- **Hạn chế (Limitations):** Một tác giả, bài ngắn; mô tả dữ liệu và baseline hạn chế nên khó tái lập. Không đo riêng miền pháp lý hay hành chính.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Khẳng định triết lý cốt lõi của Kiến trúc Hệ Thống Kép (Dual-System) trong V10.5: System 2 đảm bảo 0% ảo giác cho 1.350 thủ tục nội bộ, System 1 bù đắp các câu hỏi chính sách mở thời gian thực.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.1 (Dual-System System 1 + System 2)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Cross-checking generated claims against both structured databases and live web search reduced hallucinations by 67% in a multi-source verification framework (Patel, 2025), supporting the combination of an official procedure database with web search."
+- **Phương pháp:** Tách sự kiện nguyên tử, kiểm tra với nguồn tri thức
+- **Dữ liệu:** Tiểu sử 183 người (thủ công), 500 người (tự động)
+- **Thước đo:** FActScore
+- **Kết quả chính:** ChatGPT 58,3%; PerplexityAI 71,5%; chính xác giảm mạnh với thực thể hiếm.
+- **Hạn chế:** Chỉ tiểu sử và Wikipedia.
+- **Áp dụng cho Sys_3_4:** Thước đo phân rã sự kiện cho đánh giá câu trả lời thủ tục.
 
 ---
 
-## Nhóm 4: Truy Xuất Lai & Hệ Thống Kép (Hybrid & Dual-System Retrieval)
+## Nhóm 04: Hybrid & Dual-System Retrieval — Truy hồi lai
 
 ### 14. Corrective Retrieval Augmented Generation (CRAG)
-- **Tác giả:** Shi-Qi Yan, Jia-Chen Gu, Yun Zhu, Zhen-Hua Ling (USTC; UCLA; Google DeepMind)
-- **Năm xuất bản:** 2024
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2401.15884 [cs.CL]*
-- **Phân loại nghiên cứu:** `Primary Architecture & Fallback Mechanism`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2401.15884](https://arxiv.org/abs/2401.15884)
-- **Tệp toàn văn (PDF bản gốc):** [`Corrective Retrieval Augmented Generation (CRAG).pdf`](04_Hybrid_Dual-System_Retrieval/14_Yan_2024_CRAG_Corrective_RAG/Corrective%20Retrieval%20Augmented%20Generation%20%28CRAG%29.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](04_Hybrid_Dual-System_Retrieval/14_Yan_2024_CRAG_Corrective_RAG/literature_review.md)
+- **Tác giả:** Shi-Qi Yan, Jia-Chen Gu, Yun Zhu, Zhen-Hua Ling (University of Science and Technology of China; UCLA; Google DeepMind)
+- **Năm:** 2024
+- **Nguồn công bố:** arXiv preprint arXiv:2401.15884 (bản v3, 10/2024) — **chưa có công bố tại hội nghị/tạp chí có bình duyệt** tại thời điểm kiểm tra. Nhóm giữ lại vì đây là phương pháp nền tảng, được trích dẫn rộng rãi và triển khai phổ biến (ví dụ trong các framework RAG); mã nguồn công khai.
+- **DOI / Link:** [https://arxiv.org/abs/2401.15884](https://arxiv.org/abs/2401.15884)
+- **Tệp toàn văn:** [`Corrective Retrieval Augmented Generation (CRAG).pdf`](04_Hybrid_Dual-System_Retrieval/14_Yan_2024_CRAG_Corrective_RAG/Corrective%20Retrieval%20Augmented%20Generation%20%28CRAG%29.pdf)
+- **Tóm tắt chi tiết:** [`paper_18.md`](../../02_related_work/paper_summaries/paper_18.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-RAG phụ thuộc mạnh vào độ liên quan của tài liệu truy xuất; khi truy xuất sai, mô hình dễ sinh câu trả lời sai.
+**Tổng quan.** CRAG giải quyết tình huống bộ truy xuất trả về tài liệu sai hoặc không liên quan. Một bộ đánh giá truy xuất nhẹ (T5-large, 0,77B tham số) chấm mức liên quan của từng tài liệu và kích hoạt một trong ba hành động: *Correct* (tinh lọc tri thức trong tài liệu), *Incorrect* (bỏ tài liệu, chuyển sang tìm kiếm web), *Ambiguous* (kết hợp cả hai). Tài liệu được tinh lọc theo cách “tách rồi ghép lại” (decompose-then-recompose). CRAG “cắm vào là chạy” với RAG và Self-RAG; ví dụ với SelfRAG-LLaMA2-7b, CRAG vượt RAG chuẩn 7,0 điểm trên PopQA và 36,6 điểm trên PubHealth.
 
-Câu hỏi nghiên cứu: *Làm sao phát hiện truy xuất kém và sửa nó trước khi sinh câu trả lời?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-CRAG thêm một retrieval evaluator nhẹ (khởi tạo từ T5-large rồi fine-tune) chấm độ tin cậy của tài liệu truy xuất và kích hoạt một trong ba hành động:
-
-- **Correct:** dùng tài liệu truy xuất, lọc bớt phần thừa.
-- **Incorrect:** bỏ tài liệu, chuyển sang tìm kiếm web quy mô lớn.
-- **Ambiguous:** kết hợp cả hai.
-- Thuật toán decompose-then-recompose chia tài liệu thành mẩu nhỏ, giữ thông tin chính, lọc phần không liên quan.
-- Plug-and-play: gắn được vào RAG chuẩn và Self-RAG.
-
-#### Kết quả thực nghiệm chính
-Trên 4 bộ dữ liệu PopQA, Biography, PubHealth và Arc-Challenge (sinh ngắn và dài), CRAG cải thiện đáng kể cả RAG chuẩn lẫn Self-RAG.
-
-- Mã nguồn: github.com/HuskyInSalt/CRAG.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Dễ gắn vào pipeline RAG có sẵn. Dùng web search làm nguồn bổ sung khi kho tĩnh không đủ.
-- **Hạn chế (Limitations):** Cần huấn luyện và chọn ngưỡng cho evaluator. Web search mang theo nhiễu và độ trễ.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Nền tảng lý thuyết trực tiếp cho cơ chế `confident=False` trong `pipeline.py`: khi không tự tin về thủ tục nội bộ, tự động chuyển luồng sang System 1 (Web Search) thay vì cố hiển thị thẻ sai.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.2 (Corrective Web Search Fallback)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "When local retrieval is judged unreliable, extending it with web search improves the robustness of RAG (Yan et al., 2024); our dual-system design pairs a curated procedure database with web search along the same lines."
+- **Phương pháp:** Bộ đánh giá truy hồi → Correct/Incorrect/Ambiguous → tìm bổ sung
+- **Dữ liệu:** PopQA, Biography, PubHealth, ARC
+- **Thước đo:** Accuracy, FactScore
+- **Kết quả chính:** RAG → CRAG: PopQA 52,8 → 59,8; PubHealth 39,0 → 75,6.
+- **Hạn chế:** Cần tinh chỉnh bộ đánh giá ngoài; dùng web search.
+- **Áp dụng cho Sys_3_4:** Ý tưởng chấm độ tin cậy truy hồi trước khi sinh.
 
 ---
 
-### 15. From BM25 to Corrective RAG: Benchmarking Retrieval Strategies for Text-and-Table Documents
-- **Tác giả:** Meftun Akarsu (Technische Hochschule Ingolstadt), Recep Kaan Karaman (Uludag University), Christopher Mierbach (Radiate)
-- **Năm xuất bản:** 2026
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2604.01733 [cs.IR]*
-- **Phân loại nghiên cứu:** `Comparative Benchmark & Strategy Study`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2604.01733](https://arxiv.org/abs/2604.01733)
-- **Tệp toàn văn (PDF bản gốc):** [`From BM25 to Corrective RAG - Benchmarking Retrieval Strategies for Text-and-Table Documents.pdf`](04_Hybrid_Dual-System_Retrieval/15_Akarsu_2026_BM25_to_Corrective_RAG_Tables/From%20BM25%20to%20Corrective%20RAG%20-%20Benchmarking%20Retrieval%20Strategies%20for%20Text-and-Table%20Documents.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](04_Hybrid_Dual-System_Retrieval/15_Akarsu_2026_BM25_to_Corrective_RAG_Tables/literature_review.md)
+### 15. BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models
+- **Tác giả:** Nandan Thakur, Nils Reimers, Andreas Rücklé, Abhishek Srivastava, Iryna Gurevych (UKP Lab, Technische Universität Darmstadt)
+- **Năm:** 2021
+- **Nguồn công bố:** Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks 1 (NeurIPS 2021 Datasets and Benchmarks, Round 2) — có bình duyệt
+- **DOI / Link:** [https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/65b9eea6e1cc6bb9f0cd2a47751a186f-Abstract-round2.html](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/65b9eea6e1cc6bb9f0cd2a47751a186f-Abstract-round2.html)
+- **Tệp toàn văn:** [`BEIR - A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models.pdf`](04_Hybrid_Dual-System_Retrieval/15_Thakur_2021_BEIR_Zero-shot_IR_Benchmark/BEIR%20-%20A%20Heterogeneous%20Benchmark%20for%20Zero-shot%20Evaluation%20of%20Information%20Retrieval%20Models.pdf)
+- **Tóm tắt chi tiết:** [`paper_19.md`](../../02_related_work/paper_summaries/paper_19.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-Chưa có so sánh có hệ thống các phương pháp truy xuất hiện đại trên tài liệu chứa cả văn bản lẫn bảng biểu.
+**Tổng quan.** BEIR là benchmark đánh giá khả năng tổng quát zero-shot (ngoài phân phối huấn luyện) của các mô hình truy xuất thông tin, gồm 18 bộ dữ liệu thuộc 9 loại tác vụ và nhiều miền. Bài đánh giá 10 hệ thống thuộc 5 kiến trúc: từ vựng, sparse, dense, late-interaction và rerank. Kết luận chính: BM25 là baseline rất bền vững; rerank (BM25 + cross-encoder) và late-interaction (ColBERT) tổng quát tốt nhất nhưng tốn kém; các mô hình dense hiệu quả về tính toán nhưng thường kém BM25 khi gặp miền mới.
 
-Câu hỏi nghiên cứu: *Chiến lược truy xuất nào hiệu quả nhất cho tài liệu văn bản kèm bảng?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-So sánh 10 chiến lược truy xuất trên một benchmark hỏi đáp tài chính:
-
-- Nhóm phương pháp: sparse (BM25), dense, hybrid fusion, cross-encoder reranking, query expansion (HyDE, multi-query), index augmentation (contextual retrieval) và adaptive retrieval (CRAG).
-- Dữ liệu T²-RAGBench: 23.088 câu hỏi trên 7.318 tài liệu lẫn văn bản và bảng.
-- Đo Recall@k, MRR, nDCG và Number Match, kiểm định bootstrap ghép cặp.
-
-#### Kết quả thực nghiệm chính
-Pipeline hai giai đoạn (hybrid rồi neural reranking) tốt nhất: Recall@5 0.816, MRR@3 0.605, vượt xa mọi phương pháp một giai đoạn.
-
-- BM25 thắng dense retrieval hiện đại trên tài liệu tài chính.
-- Query expansion (HyDE, multi-query) và adaptive retrieval ít lợi cho câu hỏi số liệu chính xác; contextual retrieval cải thiện ổn định.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** So sánh rộng, có kiểm định thống kê, công bố mã. Bằng chứng BM25 vẫn mạnh ở miền cần số liệu chính xác.
-- **Hạn chế (Limitations):** Miền tài chính tiếng Anh. Reranker thần kinh tốn thêm chi phí tính toán.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Luận cứ bảo vệ thiết kế của V10.5: sử dụng SQLite FTS5 (BM25 tối ưu) làm xương sống cho kho 1.350 thủ tục thay vì lãng phí tài nguyên dựng vector database.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.4 (SQLite FTS5 vs Dense Vector Retrieval)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "On text-and-table documents, BM25 outperformed dense retrieval and a hybrid retriever with neural reranking performed best (Akarsu et al., 2026), which supports lexical BM25 retrieval over structured procedure records for fee and deadline questions."
+- **Phương pháp:** So sánh lexical, sparse, dense, late-interaction, rerank
+- **Dữ liệu:** 18 bộ dữ liệu tiếng Anh
+- **Thước đo:** nDCG@10, Recall@100
+- **Kết quả chính:** BM25 + cross-encoder +11% so với BM25; DPR −47,7%; BM25 là baseline mạnh.
+- **Hạn chế:** Thiên lệch từ vựng trong chú thích; chỉ tiếng Anh.
+- **Áp dụng cho Sys_3_4:** Cơ sở cho thiết kế truy hồi lai + reranker.
 
 ---
 
 ### 16. Optimizing Retrieval-Augmented Generation with Multi-Agent Hybrid Retrieval
 - **Tác giả:** Hediyeh Baban, Sai Abhishek Pidaparthi, Samaksh Gulati, Aashutosh Nema (Dell Technologies)
-- **Năm xuất bản:** 2025
-- **Tạp chí / Hội nghị:** *KDD 2025 Workshop GenAIRecP (Generative AI for Recommender Systems and Personalization)*
-- **Phân loại nghiên cứu:** `Multi-Agent System & Optimization`
-- **Link DOI / Citation gốc:** [https://genai-personalization.github.io/assets/papers/GenAIRecP2025/11_Baban.pdf](https://genai-personalization.github.io/assets/papers/GenAIRecP2025/11_Baban.pdf)
-- **Tệp toàn văn (PDF bản gốc):** [`Optimizing Retrieval-Augmented Generation with Multi-Agent Hybrid Retrieval.pdf`](04_Hybrid_Dual-System_Retrieval/16_Baban_2025_Multi-Agent_Hybrid_Retrieval_KDD/Optimizing%20Retrieval-Augmented%20Generation%20with%20Multi-Agent%20Hybrid%20Retrieval.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](04_Hybrid_Dual-System_Retrieval/16_Baban_2025_Multi-Agent_Hybrid_Retrieval_KDD/literature_review.md)
+- **Năm:** 2025
+- **Nguồn công bố:** Workshop GenAIRecP 2025 (Generative AI for Recommendation and Personalization) tổ chức cùng ACM SIGKDD 2025 (KDD ’25, Toronto) — workshop có bình duyệt. Bản PDF dùng mẫu ACM KDD ’25; DOI in trên PDF (10.1145/3690624) là DOI chung của kỷ yếu mẫu, không phải DOI riêng của bài.
+- **DOI / Link:** [https://genai-personalization.github.io/assets/papers/GenAIRecP2025/11_Baban.pdf](https://genai-personalization.github.io/assets/papers/GenAIRecP2025/11_Baban.pdf)
+- **Tệp toàn văn:** [`Optimizing Retrieval-Augmented Generation with Multi-Agent Hybrid Retrieval.pdf`](04_Hybrid_Dual-System_Retrieval/16_Baban_2025_Multi-Agent_Hybrid_Retrieval_KDD/Optimizing%20Retrieval-Augmented%20Generation%20with%20Multi-Agent%20Hybrid%20Retrieval.pdf)
+- **Tóm tắt chi tiết:** [`paper_20.md`](../../02_related_work/paper_summaries/paper_20.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-BM25 và tìm kiếm embedding mỗi thứ có điểm yếu riêng và dễ hụt với câu hỏi phức tạp.
+**Tổng quan.** Bài báo đề xuất một quy trình RAG lai “agentic” trên LangGraph: hai nhánh truy xuất song song (BM25 và embedding Sentence-BERT), mỗi nhánh có tác tử truy xuất và tác tử lọc; một tác tử phân tích độ phức tạp gán trọng số cho hai nhánh; tác tử so sánh hợp nhất điểm theo trọng số; cuối cùng LLM sắp xếp lại theo ngữ cảnh. Trên kho 100.000 tài liệu và 500 truy vấn, hệ thống giảm thời gian truy xuất trung bình từ 43 giây xuống 11 giây (nhanh gấp 4 lần) và tăng Top-10 accuracy từ 85% lên 92% so với baseline lai tĩnh.
 
-Câu hỏi nghiên cứu: *Kết hợp truy xuất lai với nhiều tác tử phối hợp có cải thiện độ liên quan và tốc độ truy xuất không?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-Quy trình agentic RAG:
-
-- Kết hợp BM25 và semantic search, gộp kết quả bằng weighted cosine similarity.
-- LLM sắp xếp lại tài liệu theo ngữ cảnh.
-- Điều phối tác tử bằng LangGraph để xếp hạng và lọc tài liệu.
-- Phân tích độ nhạy của trọng số giữa hai kiểu truy xuất.
-
-#### Kết quả thực nghiệm chính
-Độ trễ truy xuất giảm 4 lần (từ 43 giây xuống 11 giây) và độ chính xác liên quan tăng 7%.
-
-- Bài thảo luận thêm về khả năng mở rộng và hạn chế của cách làm.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Thực tế, dùng công cụ phổ biến (LangGraph). Có phân tích độ nhạy trọng số lai.
-- **Hạn chế (Limitations):** Bài workshop 7 trang; mô tả dữ liệu hạn chế. Miền tài liệu doanh nghiệp/khoa học, không phải pháp lý.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Hình mẫu cho kiến trúc điều phối State Machine 2 lượt (Turn 1: Extractor + Card, Turn 2: Customer Care Agent) trong V10.5.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.2 (Two-Turn Multi-Agent Orchestration)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Combining BM25 with semantic search and weighting the two scores improved relevance by 7% while cutting retrieval latency from 43 s to 11 s in an agentic RAG workflow (Baban et al., 2025)."
+- **Phương pháp:** Tác tử điều phối BM25 + embedding, tự điều chỉnh trọng số
+- **Dữ liệu:** 100.000 tài liệu, 500 truy vấn chú thích
+- **Thước đo:** Top-10 accuracy, F1, độ trễ
+- **Kết quả chính:** Top-10 85% → 92%; độ trễ 43 s → 11 s; trọng số BM25/embedding 30/70 tốt nhất.
+- **Hạn chế:** Phụ thuộc embedding; chi phí điều phối.
+- **Áp dụng cho Sys_3_4:** Tham khảo cân bằng sparse/dense; RRF trong Sys_3_4.
 
 ---
 
-### 17. LegalMALR: Multi-Agent Query Understanding and LLM-Based Reranking for Chinese Statute Retrieval
-- **Tác giả:** Yunhan Li, Mingjie Xie, Gaoli Kang, Zihan Gong, Gengshen Wu, Min Yang (City University of Macau; Shenzhen Institutes of Advanced Technology, CAS; SUSTech; Shenzhen University of Advanced Technology)
-- **Năm xuất bản:** 2026
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2601.17692 [cs.IR]*
-- **Phân loại nghiên cứu:** `Multi-Agent Query Reformulation & LLM Reranking`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2601.17692](https://arxiv.org/abs/2601.17692)
-- **Tệp toàn văn (PDF bản gốc):** [`LegalMALR - Multi-Agent Query Understanding and LLM-Based Reranking for Chinese Statute Retrieval.pdf`](04_Hybrid_Dual-System_Retrieval/17_Li_2026_LegalMALR_Query_Understanding/LegalMALR%20-%20Multi-Agent%20Query%20Understanding%20and%20LLM-Based%20Reranking%20for%20Chinese%20Statute%20Retrieval.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](04_Hybrid_Dual-System_Retrieval/17_Li_2026_LegalMALR_Query_Understanding/literature_review.md)
+### 17. Legal Query RAG (LQ-RAG)
+- **Tác giả:** Rahman S. M. Wahidur, Sumin Kim, Haeung Choi, David S. Bhatti, Heung-No Lee (Gwangju Institute of Science and Technology – GIST, Hàn Quốc)
+- **Năm:** 2025
+- **Nguồn công bố:** IEEE Access, Vol. 13 (2025), trang 36978–36994 — tạp chí có bình duyệt (nhận bài 14/1/2025, chấp nhận 31/1/2025, xuất bản 14/2/2025), open access CC BY 4.0
+- **DOI / Link:** [https://doi.org/10.1109/ACCESS.2025.3542125](https://doi.org/10.1109/ACCESS.2025.3542125)
+- **Tệp toàn văn:** [`Legal_Query_RAG_IEEE_Access_2025.pdf`](04_Hybrid_Dual-System_Retrieval/17_GIST_2025_LQ-RAG_Legal_Query_Feedback/Legal_Query_RAG_IEEE_Access_2025.pdf)
+- **Tóm tắt chi tiết:** [`paper_11.md`](../../02_related_work/paper_summaries/paper_11.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-Câu hỏi pháp lý thực tế thường ngầm ý, nhiều vấn đề và diễn đạt đời thường. Dense retriever bám mặt chữ của câu hỏi, còn reranker nhẹ thiếu năng lực suy luận pháp lý.
+**Tổng quan.** Bài báo đề xuất LQ-RAG, một khung RAG cho truy vấn pháp lý có vòng phản hồi đệ quy. Khung gồm bốn thành phần: mô hình embedding tinh chỉnh cho luật (GIST-Law-Embed), mô hình sinh tinh chỉnh lai (HFM – hợp nhất hai bản LoRA của LLaMA-3-8B), tác tử đánh giá dùng GPT-4, và tác tử viết lại prompt. Kết quả: embedding tinh chỉnh tăng Hit Rate 13% và MRR 15%; HFM cải thiện 24% so với LLM tổng quát; LQ-RAG đạt điểm liên quan trung bình 80%, cao hơn RAG thường 23% và RAG với mô hình tinh chỉnh (FTM) 14%.
 
-Câu hỏi nghiên cứu: *Làm sao truy xuất đúng điều luật cho câu hỏi đời thường, thiếu thông tin?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-LegalMALR kết hợp hai thành phần:
-
-- **Multi-Agent Query Understanding System (MAS):** sinh nhiều cách diễn đạt lại có căn cứ pháp lý và truy xuất dense lặp lại để mở rộng tập ứng viên.
-- Tối ưu chính sách MAS bằng GRPO để ổn định việc viết lại câu hỏi của LLM.
-- **LLM Reranker zero-shot:** suy luận pháp lý bằng ngôn ngữ tự nhiên để xếp hạng cuối.
-- Bộ dữ liệu CSAID: 118 câu hỏi khó tiếng Trung, nhiều nhãn điều luật; đánh giá thêm trên benchmark STARD.
-
-#### Kết quả thực nghiệm chính
-LegalMALR vượt rõ các baseline RAG mạnh ở cả trong phân phối (CSAID) lẫn ngoài phân phối.
-
-- Hiệu quả đến từ việc kết hợp diễn giải câu hỏi đa góc nhìn, tối ưu bằng học tăng cường và rerank bằng mô hình lớn.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Nhắm đúng khoảng cách giữa từ ngữ đời thường và văn bản luật. Có bộ dữ liệu khó được gán nhãn nhiều điều luật.
-- **Hạn chế (Limitations):** Nhiều tác tử cộng LLM reranker tốn tính toán, khó chạy với mô hình 1.5B. Tiếng Trung; CSAID nhỏ (118 câu).
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Trực tiếp tương ứng với tính năng `synonyms.json` của V10.5 (map 'độc thân' -> 'tình trạng hôn nhân', bỏ 'cho bố', 'quá hạn', 'ở phường') giúp đạt 89/89 câu trong top-3.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.4 (Synonym Dictionary Expansion)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Colloquial, underspecified legal questions defeat surface-form retrieval; LegalMALR recovers the right statutes by rewriting queries into legal terms and reranking with an LLM (Li et al., 2026). We address the same gap more cheaply with a curated synonym table applied before BM25 search."
+- **Phương pháp:** RAG có tác tử đánh giá phản hồi + tinh chỉnh embedding/LLM
+- **Dữ liệu:** 7 bộ truy hồi tự xây; benchmark tổng quát và pháp lý
+- **Thước đo:** Hit Rate, MRR, điểm benchmark
+- **Kết quả chính:** HFM cải thiện 9% (tổng quát) và 38% (pháp lý); kém ở một số bộ.
+- **Hạn chế:** Phụ thuộc GPT-4 đánh giá; độ trễ cao.
+- **Áp dụng cho Sys_3_4:** Vòng phản hồi viết lại truy vấn; cảnh báo chi phí độ trễ.
 
 ---
 
-## Nhóm 5: Mô Hình Ngôn Ngữ Nhỏ (SLMs) & Triển Khai Cục Bộ (Local/Edge SLMs)
+### 17. A Statutory Article Retrieval Dataset in French (BSARD)
+- **Tác giả:** Antoine Louis, Gerasimos Spanakis (Law & Tech Lab, Maastricht University)
+- **Năm:** 2022
+- **Nguồn công bố:** Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (ACL 2022), Volume 1: Long Papers, trang 6789–6803 — hội nghị hàng đầu, có bình duyệt
+- **DOI / Link:** [https://aclanthology.org/2022.acl-long.468/](https://aclanthology.org/2022.acl-long.468/)
+- **Tệp toàn văn:** [`A Statutory Article Retrieval Dataset in French.pdf`](04_Hybrid_Dual-System_Retrieval/17_Louis_2022_BSARD_Statutory_Article_Retrieval/A%20Statutory%20Article%20Retrieval%20Dataset%20in%20French.pdf)
+- **Tóm tắt chi tiết:** [`paper_12.md`](../../02_related_work/paper_summaries/paper_12.md)
 
-### 18. Fine-Tuning Small Language Models for Domain-Specific AI: An Edge AI Perspective
-- **Tác giả:** Rakshit Aralimatti, Syed Abdul Gaffar Shakhadri, Kruthika KR, Kartik Basavaraj Angadi (SandLogic Technologies)
-- **Năm xuất bản:** 2025
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2503.01933 [cs.LG]*
-- **Phân loại nghiên cứu:** `Edge AI & Small Model Deployment Study`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2503.01933](https://arxiv.org/abs/2503.01933)
-- **Tệp toàn văn (PDF bản gốc):** [`Fine-Tuning Small Language Models for Domain-Specific AI - An Edge AI Perspective.pdf`](05_Local_SLMs_Edge_AI/18_Aralimatti_2025_Fine-Tuning_SLMs_Edge_AI/Fine-Tuning%20Small%20Language%20Models%20for%20Domain-Specific%20AI%20-%20An%20Edge%20AI%20Perspective.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](05_Local_SLMs_Edge_AI/18_Aralimatti_2025_Fine-Tuning_SLMs_Edge_AI/literature_review.md)
+**Tổng quan.** Bài báo giới thiệu BSARD — bộ dữ liệu truy xuất điều luật bằng tiếng Pháp bản ngữ, gồm hơn 1.100 câu hỏi pháp lý của công dân Bỉ được chuyên gia gán nhãn với các điều luật liên quan trong kho hơn 22.600 điều luật. Tác giả đánh giá các phương pháp truy xuất từ vựng (TF-IDF, BM25) và dense (bi-encoder), ở chế độ zero-shot và có huấn luyện. Kết quả tốt nhất: bi-encoder two-tower huấn luyện trên BSARD đạt R@100 = 74,78%.
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-Chạy LLM lớn trên thiết bị biên gặp chi phí tính toán, tiêu thụ năng lượng và rủi ro quyền riêng tư dữ liệu.
-
-Câu hỏi nghiên cứu: *Mô hình rất nhỏ, nếu được thiết kế và tinh chỉnh cẩn thận, có đáp ứng được bài toán miền cụ thể trên thiết bị biên không?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-Bài giới thiệu dòng Shakti Small Language Models gồm Shakti-100M, Shakti-250M và Shakti-500M:
-
-- Kết hợp kiến trúc hiệu quả, lượng tử hoá và nguyên tắc AI có trách nhiệm.
-- Mô tả pipeline huấn luyện và tinh chỉnh cho miền y tế, tài chính và pháp lý.
-- Đánh giá trên benchmark chung (MMLU, HellaSwag), dữ liệu miền và bộ responsible AI (BBQ, ToxiGen).
-
-#### Kết quả thực nghiệm chính
-Tác giả kết luận mô hình nhỏ, khi được thiết kế và tinh chỉnh cẩn thận, đáp ứng và nhiều khi vượt kỳ vọng trong kịch bản edge-AI thực tế.
-
-- Ví dụ responsible AI: Shakti-500M đạt 54.08% trên BBQ (Shakti-250M 50.2%) và 51.5% trên ToxiGen (Shakti-250M 47.5%).
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Tập trung vào triển khai trên thiết bị giới hạn tài nguyên. Có tinh chỉnh cho cả miền pháp lý.
-- **Hạn chế (Limitations):** Mô hình và báo cáo cùng từ một công ty (SandLogic). Quy mô 100M–500M, không so sánh trực tiếp với Qwen2.5-1.5B.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Luận điểm cốt lõi bảo vệ tính khả thi của dự án: chứng minh việc dùng Qwen2.5-1.5B chạy local qua Ollama trên máy tính cấp xã là hoàn toàn khả thi và bảo mật tuyệt đối.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 1 (Introduction) & Section 3.1 (Edge SLM Deployment)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "Compact language models, when carefully engineered and fine-tuned, can meet domain requirements on edge devices while keeping data local (Aralimatti et al., 2025)."
+- **Phương pháp:** Benchmark truy hồi điều luật; so sánh lexical và dense
+- **Dữ liệu:** 1.108 câu hỏi, 22.633 điều luật
+- **Thước đo:** R@k, MRR, MAP, độ trễ
+- **Kết quả chính:** BM25 R@100 51,33%; bi-encoder huấn luyện 74,78%.
+- **Hạn chế:** Kho chỉ 32 bộ luật; câu hỏi không phải lúc nào cũng trả lời được bằng luật.
+- **Áp dụng cho Sys_3_4:** Cơ sở so sánh BM25 với dense và truy hồi lai cho văn bản quy phạm.
 
 ---
 
-### 19. Qwen2.5 Technical Report: Advancing Open Foundation Models across Scales
-- **Tác giả:** Qwen Team (Alibaba Cloud)
-- **Năm xuất bản:** 2024
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2412.15115 [cs.CL]*
-- **Phân loại nghiên cứu:** `Technical Report & Foundation Model`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2412.15115](https://arxiv.org/abs/2412.15115)
-- **Tệp toàn văn (PDF bản gốc):** [`Qwen2.5 Technical Report - Advancing Open Foundation Models across Scales.pdf`](05_Local_SLMs_Edge_AI/19_Qwen_2024_Qwen2.5_Technical_Report/Qwen2.5%20Technical%20Report%20-%20Advancing%20Open%20Foundation%20Models%20across%20Scales.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](05_Local_SLMs_Edge_AI/19_Qwen_2024_Qwen2.5_Technical_Report/literature_review.md)
+## Nhóm 05: Local SLMs & Edge AI — Mô hình mở, tinh chỉnh hiệu quả
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-Cần một dòng mô hình mở có đủ kích cỡ cho nhiều nhu cầu, từ thiết bị biên đến máy chủ.
+### 18. QLoRA: Efficient Finetuning of Quantized LLMs
+- **Tác giả:** Tim Dettmers, Artidoro Pagnoni, Ari Holtzman, Luke Zettlemoyer (University of Washington)
+- **Năm:** 2023
+- **Nguồn công bố:** Advances in Neural Information Processing Systems 36 (NeurIPS 2023) — hội nghị hàng đầu, có bình duyệt
+- **DOI / Link:** [https://proceedings.neurips.cc/paper_files/paper/2023/hash/1feb87871436031bdc0f2beaa62a049b-Abstract-Conference.html](https://proceedings.neurips.cc/paper_files/paper/2023/hash/1feb87871436031bdc0f2beaa62a049b-Abstract-Conference.html)
+- **Tệp toàn văn:** [`QLoRA - Efficient Finetuning of Quantized LLMs.pdf`](05_Local_SLMs_Edge_AI/18_Dettmers_2023_QLoRA_Efficient_Finetuning/QLoRA%20-%20Efficient%20Finetuning%20of%20Quantized%20LLMs.pdf)
+- **Tóm tắt chi tiết:** [`paper_21.md`](../../02_related_work/paper_summaries/paper_21.md)
 
-Câu hỏi nghiên cứu: *Mở rộng dữ liệu tiền huấn luyện và cải tiến hậu huấn luyện nâng năng lực mô hình ở các kích cỡ đến đâu?*
+**Tổng quan.** QLoRA cho phép tinh chỉnh LLM 65B tham số trên một GPU 48GB mà vẫn giữ hiệu năng như tinh chỉnh đầy đủ 16-bit. Cơ chế: lan truyền gradient qua mô hình nền đã đóng băng và lượng tử 4-bit vào các adapter hạng thấp (LoRA). Ba đổi mới chính: kiểu dữ liệu 4-bit NormalFloat (NF4), lượng tử kép (Double Quantization) và Paged Optimizers. Họ mô hình Guanaco tinh chỉnh bằng QLoRA đạt 99,3% hiệu năng của ChatGPT trên Vicuna benchmark (theo GPT-4 chấm) sau 24 giờ trên một GPU.
 
-#### Phương pháp luận & Đóng góp kỹ thuật
-Qwen2.5 cải tiến cả tiền huấn luyện và hậu huấn luyện:
-
-- Dữ liệu tiền huấn luyện tăng từ 7 lên 18 nghìn tỷ token.
-- Hậu huấn luyện: SFT hơn 1 triệu mẫu và học tăng cường nhiều giai đoạn (DPO offline, GRPO online).
-- Mô hình mở kích cỡ 0.5B, 1.5B, 3B, 7B, 14B, 32B và 72B (base và instruct), có bản lượng tử hoá; bản hosted dạng MoE là Qwen2.5-Turbo và Qwen2.5-Plus.
-
-#### Kết quả thực nghiệm chính
-Qwen2.5-72B-Instruct cạnh tranh với Llama-3-405B-Instruct dù nhỏ hơn khoảng 5 lần.
-
-- Hậu huấn luyện cải thiện sinh văn bản dài, phân tích dữ liệu có cấu trúc và làm theo chỉ dẫn.
-- Qwen2.5-1.5B-Instruct và 0.5B-Instruct cải thiện rõ so với thế hệ trước; nhóm tác giả xem chúng phù hợp cho ứng dụng biên tài nguyên hạn chế.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Tài liệu chính thức của mô hình V10.5 đang dùng. Nhiều kích cỡ, có bản lượng tử hoá.
-- **Hạn chế (Limitations):** Không có đánh giá riêng cho tiếng Việt. Ở kích cỡ 1.5B, điểm làm theo chỉ dẫn thấp hơn nhiều so với các kích cỡ lớn trong bảng đánh giá nội bộ của báo cáo.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Tài liệu kỹ thuật căn bản mô tả mô hình chính (`qwen2.5:1.5b`) được sử dụng trong V10.5, dùng để trích dẫn trong phần 'Experimental Setup & Model Specifications'.
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.1 (Base Foundation Model Selection)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "We use Qwen2.5-1.5B-Instruct (Qwen Team, 2024), a small open-weight member of the Qwen2.5 family that its authors position for resource-constrained edge applications."
+- **Phương pháp:** NF4 + double quantization + paged optimizer + LoRA
+- **Dữ liệu:** GLUE, Super-NaturalInstructions, MMLU, 8 bộ chỉ dẫn
+- **Thước đo:** Perplexity, MMLU, Elo (Vicuna bench)
+- **Kết quả chính:** NF4 + DQ tái tạo hiệu năng 16-bit (MMLU 53,1 vs 53,0); Guanaco 7B cần 5GB.
+- **Hạn chế:** Chưa chứng minh ở 33B/65B so với full 16-bit.
+- **Áp dụng cho Sys_3_4:** Khả thi tinh chỉnh Qwen2.5 trên GPU on-prem.
 
 ---
 
-### 20. Unveiling the Secret Recipe: A Guide For Supervised Fine-Tuning Small LLMs
-- **Tác giả:** Aldo Pareja, Nikhil Shivakumar Nayak, Hao Wang, Krishnateja Killamsetty, Shivchander Sudalairaj, Wenlong Zhao, Seungwook Han, Abhishek Bhandwaldar, Guangxuan Xu, Kai Xu, Ligong Han, Luke Inglis, Akash Srivastava (Red Hat AI Innovation; MIT-IBM Watson AI Lab; IBM Research)
-- **Năm xuất bản:** 2024
-- **Tạp chí / Hội nghị:** *arXiv preprint, arXiv:2412.13337 [cs.LG]*
-- **Phân loại nghiên cứu:** `Engineering Methodology & Empirical Guide`
-- **Link DOI / Citation gốc:** [https://arxiv.org/abs/2412.13337](https://arxiv.org/abs/2412.13337)
-- **Tệp toàn văn (PDF bản gốc):** [`Unveiling the Secret Recipe - A Guide For Supervised Fine-Tuning Small LLMs.pdf`](05_Local_SLMs_Edge_AI/20_Pareja_2024_Guide_SFT_Small_LLMs/Unveiling%20the%20Secret%20Recipe%20-%20A%20Guide%20For%20Supervised%20Fine-Tuning%20Small%20LLMs.pdf)
-- **Bản phân tích khoa học chi tiết:** [`literature_review.md`](05_Local_SLMs_Edge_AI/20_Pareja_2024_Guide_SFT_Small_LLMs/literature_review.md)
+### 19. Qwen2.5 Technical Report
+- **Tác giả:** Qwen Team (Alibaba Group) — An Yang, Baosong Yang, Beichen Zhang và cộng sự
+- **Năm:** 2024 (bản v2: 1/2025)
+- **Nguồn công bố:** Báo cáo kỹ thuật trên arXiv (arXiv:2412.15115) — **không phải bài hội nghị/tạp chí có bình duyệt**. Nhóm giữ lại vì đây là tài liệu chính thức, duy nhất mô tả mô hình nền Qwen2.5 mà hệ thống Sys_3_4 sử dụng; trọng số mô hình công khai và được cộng đồng kiểm chứng độc lập rộng rãi.
+- **DOI / Link:** [https://arxiv.org/abs/2412.15115](https://arxiv.org/abs/2412.15115)
+- **Tệp toàn văn:** [`Qwen2.5 Technical Report - Advancing Open Foundation Models across Scales.pdf`](05_Local_SLMs_Edge_AI/19_Qwen_2024_Qwen2.5_Technical_Report/Qwen2.5%20Technical%20Report%20-%20Advancing%20Open%20Foundation%20Models%20across%20Scales.pdf)
+- **Tóm tắt chi tiết:** [`paper_22.md`](../../02_related_work/paper_summaries/paper_22.md)
 
-#### Abstract tóm tắt & Vấn đề giải quyết
-Phòng lab lớn tinh chỉnh LLM hiệu quả nhờ tài nguyên và đội ngũ, còn nhà phát triển cá nhân và tổ chức nhỏ thiếu tài nguyên để thử nhiều cấu hình.
+**Tổng quan.** Báo cáo giới thiệu dòng LLM Qwen2.5 gồm bảy kích thước trọng số mở (0.5B, 1.5B, 3B, 7B, 14B, 32B, 72B — bản base và instruct, kèm bản lượng tử) và hai mô hình MoE độc quyền (Qwen2.5-Turbo, Qwen2.5-Plus). Cải tiến chính: dữ liệu tiền huấn luyện tăng từ 7 lên 18 nghìn tỷ token; hậu huấn luyện với hơn 1 triệu mẫu SFT cùng RL nhiều giai đoạn (DPO ngoại tuyến, GRPO trực tuyến). Theo báo cáo, Qwen2.5-72B-Instruct cạnh tranh với Llama-3-405B-Instruct dù nhỏ hơn khoảng 5 lần, và Qwen2.5-7B-Instruct vượt Gemma2-9B-IT và Llama3.1-8B-Instruct ở hầu hết tác vụ, trừ IFEval.
 
-Câu hỏi nghiên cứu: *Cấu hình supervised fine-tuning (SFT) nào hiệu quả cho mô hình nhỏ 3B–7B?*
-
-#### Phương pháp luận & Đóng góp kỹ thuật
-Nghiên cứu hệ thống về SFT trên tập instruction tuning đa miền, đa kỹ năng:
-
-- 4 mô hình mở cỡ 3B–7B.
-- Khảo sát batch size, learning rate, số bước warmup, lịch learning rate, và huấn luyện theo pha (phased) so với gộp (stacked).
-- Đối chiếu với khuyến nghị của TULU và cách huấn luyện theo pha của Orca.
-
-#### Kết quả thực nghiệm chính
-Nhiều kết quả trái với thực hành phổ biến:
-
-- Batch lớn kết hợp learning rate thấp cho kết quả tốt hơn trên MMLU, MTBench và Open LLM Leaderboard.
-- Động lực sớm (gradient norm thấp, loss cao) dự báo mô hình cuối tốt hơn, giúp dừng sớm các lần chạy kém và tiết kiệm tính toán.
-- Một số đơn giản hoá về warmup và lịch learning rate không làm giảm hiệu năng.
-- Huấn luyện theo pha và gộp không khác biệt đáng kể; gộp đơn giản và hiệu quả mẫu hơn.
-
-#### Đánh giá Ưu điểm & Hạn chế
-- **Ưu điểm (Strengths):** Hướng dẫn thực hành cụ thể, có số liệu cho nhiều cấu hình. Phản biện có bằng chứng các khuyến nghị phổ biến (TULU, Orca).
-- **Hạn chế (Limitations):** "Small" ở đây là 3B–7B, lớn hơn mô hình 1.5B của V10.5. Chỉ bàn về fine-tuning, không bàn prompt hay guardrail lúc suy luận.
-
-#### Ánh xạ trực tiếp tới kiến trúc V10.5
-> **Ý nghĩa kiến trúc:** Cơ sở phương pháp luận cho việc thiết kế prompt tinh gọn của V10.5 (dừng sinh ngay khi xuống dòng, cắt bỏ danh sách sau dấu hai chấm) giúp tăng tốc độ phản hồi gấp 4 lần (từ 1.55s xuống 0.38s).
-
-#### Gợi ý trích dẫn khi viết bài báo khoa học (Citation Guidance)
-- **Vị trí đề xuất trong bài báo:** `Section 3.6 (Prompt Optimization & SFT Guardrails)`
-- **Mẫu câu trích dẫn học thuật (Draft Context):**
-  > "If the base model is later fine-tuned, large batch sizes with low learning rates, and early stopping based on training dynamics, are the recommended recipe for small (3B–7B) LLMs (Pareja et al., 2024)."
+- **Phương pháp:** Tiền huấn luyện 18T token + hậu huấn luyện SFT/RL
+- **Dữ liệu:** Benchmark mở + nội bộ (dữ liệu huấn luyện không công bố)
+- **Thước đo:** MMLU, MATH, HumanEval, IFEval…
+- **Kết quả chính:** Qwen2.5-7B-Instruct vượt Gemma2-9B và Llama3.1-8B (trừ IFEval).
+- **Hạn chế:** Không bình duyệt; không đánh giá riêng tiếng Việt.
+- **Áp dụng cho Sys_3_4:** Tài liệu chính thức của mô hình dùng trong Friendly Engine.
 
 ---
 
-## Bảng tổng hợp đối sánh 20 bài báo theo khía cạnh dự án V10.5
+### 20. Unveiling the Secret Recipe: A Guide for Supervised Fine-Tuning Small LLMs
+- **Tác giả:** Aldo Pareja, Nikhil Shivakumar Nayak, Hao Wang, Krishnateja Killamsetty, Shivchander Sudalairaj, Wenlong Zhao, Seungwook Han, Abhishek Bhandwaldar, Guangxuan Xu, Kai Xu, Ligong Han, Luke Inglis, Akash Srivastava (Red Hat AI Innovation; MIT-IBM Watson AI Lab; IBM Research; MIT; UMass Amherst)
+- **Năm:** 2025 (preprint 12/2024)
+- **Nguồn công bố:** The Thirteenth International Conference on Learning Representations (ICLR 2025), poster — hội nghị hàng đầu, có bình duyệt
+- **DOI / Link:** [https://iclr.cc/virtual/2025/poster/28940](https://iclr.cc/virtual/2025/poster/28940)
+- **Tệp toàn văn:** [`Unveiling the Secret Recipe - A Guide For Supervised Fine-Tuning Small LLMs.pdf`](05_Local_SLMs_Edge_AI/20_Pareja_2024_Guide_SFT_Small_LLMs/Unveiling%20the%20Secret%20Recipe%20-%20A%20Guide%20For%20Supervised%20Fine-Tuning%20Small%20LLMs.pdf)
+- **Tóm tắt chi tiết:** [`paper_23.md`](../../02_related_work/paper_summaries/paper_23.md)
 
-| STT | Bài báo / Tác giả | Năm | Nơi công bố | Trọng tâm học thuật | Thành phần tương ứng trong V10.5 | Vị trí trích dẫn đề xuất |
-|:---:|---|:---:|---|---|---|---|
-| **1** | *GuidaPA* (Daniel M. Jimenez-Gutierrez) | 2026 | arXiv preprint | Primary Architecture & Privacy-Preserving System | Cơ sở chạy mô hình offline qua Ollama (qwen2.5:1.5b) bảo mật dữ liệu dân | `Section 1 (Introduction)` |
-| **2** | *GovAI-Pipe* (Ahmet Kaplan) | 2026 | arXiv preprint | Governance Framework (Design Science Research) | Pipeline điều phối 2 Turn + Lớp Out-of-table Guard kiểm soát tuân thủ | `Section 3.2 (Pipeline Governance)` |
-| **3** | *Grip on LLMs* (Laurens Samson) | 2026 | arXiv preprint | Empirical Benchmark & Civil Service Survey | Thiết kế bộ tiêu chí đánh giá (Evaluation) cho chatbot dịch vụ công | `Section 4 (Evaluation Methodology)` |
-| **4** | *COPAL* (Yingjie Liu) | 2026 | arXiv preprint | Benchmark & Alignment Methodology | Xử lý biến thể thẩm quyền cấp Tỉnh và Xã/Phường (_pick_province_variant) | `Section 2.2 (Regulatory Knowledge Base)` |
-| **5** | *LegalCheck* (Virgill van der Meer) | 2026 | arXiv preprint / ICAIL 2026 | Primary Architecture & Case Study | Phân cấp thẩm quyền hành chính _authority_level (Xã > Huyện > Tỉnh > TW) | `Section 3.3 (Authority Level Hierarchical Ranking)` |
-| **6** | *LegalBench-RAG* (Nicholas Pipitone) | 2024 | arXiv preprint | Standard Benchmark & Evaluation Methodology | Luận chứng dùng FTS5 BM25 kết hợp F1 token overlap thay vì dense vector | `Section 2.1 (Retrieval in Regulatory Domains)` |
-| **7** | *CanLegalRAGBench* (Ethan Zhao) | 2026 | arXiv preprint | Benchmark & Legal RAG Evaluation | Cấu trúc hóa 1.350 thủ tục và phân đoạn trường dữ liệu theo facet | `Section 3.4 (Structured Facet Indexing)` |
-| **8** | *HyPA-RAG* (Rishi Kalra) | 2024 | NAACL 2025 Industry / CustomNLP4U @ EMNLP 2024 | Primary Architecture & Adaptive Algorithm | Xếp hạng đa tiêu chí trong search_f1 (BM25 + Token F1 + Exact match) | `Section 3.4 (FTS5 + Exact Match Reranking)` |
-| **9** | *Chain-of-Verification (CoVe)* (Shehzaad Dhuliawala) | 2023 | Findings of ACL 2024 | Foundational Methodology & Algorithm | Nguồn gốc lý thuyết trực tiếp cho module Backend/core/verifier.py | `Section 3.5 (Fact Verification` |
-| **10** | *Self-RAG* (Akari Asai) | 2024 | ICLR 2024 | Foundational Model Framework | Thiết kế Gatekeeper nhận diện ý định và phân luồng System 1 / System 2 | `Section 3.2 (System 1 vs System 2 Routing)` |
-| **11** | *CRITIC* (Zhibin Gou) | 2024 | ICLR 2024 | Interactive Verification Architecture | Cơ chế Grounding Guard tra cứu đối chiếu trực tiếp với CSDL thực tế | `Section 3.5 (Tool-Interactive Grounding Guard)` |
-| **12** | *GASP* (Mohamed Aly Bouke) | 2026 | arXiv preprint | Empirical Detection Methodology | Cắt bỏ danh sách hồ sơ suy diễn bịa đặt sau dấu hai chấm không có căn cứ | `Section 3.5 (Post-generation Dossier Truncation)` |
-| **13** | *Multi-Modal Fact-Verification* (Piyushkumar Patel) | 2025 | arXiv preprint | System Framework & Cross-Verification | Kiến trúc Hệ Thống Kép (Dual-System): CSDL SQLite + Web Search thời gian thực | `Section 3.1 (Dual-System System 1 + System 2)` |
-| **14** | *CRAG* (Shi-Qi Yan) | 2024 | arXiv preprint | Primary Architecture & Fallback Mechanism | Cơ chế fallback sang Web Search khi System 2 trả confident=False | `Section 3.2 (Corrective Web Search Fallback)` |
-| **15** | *From BM25 to Corrective RAG* (Meftun Akarsu) | 2026 | arXiv preprint | Comparative Benchmark & Strategy Study | Khẳng định SQLite FTS5 trên dữ liệu bảng biểu mẫu vượt trội dense vector | `Section 3.4 (SQLite FTS5 vs Dense Vector Retrieval)` |
-| **16** | *Multi-Agent Hybrid Retrieval* (Hediyeh Baban) | 2025 | KDD 2025 Workshop (GenAIRecP) | Multi-Agent System & Optimization | Điều phối 2 Turn (Turn 1: CSDL; Turn 2: Customer Care đối thoại) | `Section 3.2 (Two-Turn Multi-Agent Orchestration)` |
-| **17** | *LegalMALR* (Yunhan Li) | 2026 | arXiv preprint | Multi-Agent Query Reformulation & LLM Reranking | Bảng từ điển từ vựng dân sự synonyms.json chuẩn hóa truy vấn người dân | `Section 3.4 (Synonym Dictionary Expansion)` |
-| **18** | *Fine-Tuning SLMs (Shakti)* (Rakshit Aralimatti) | 2025 | arXiv preprint | Edge AI & Small Model Deployment Study | Luận chứng chạy mô hình cục bộ Qwen2.5-1.5B tại biên đảm bảo bảo mật dữ liệu | `Section 1 (Introduction)` |
-| **19** | *Qwen2.5 Technical Report* (Qwen Team) | 2024 | arXiv preprint | Technical Report & Foundation Model | Cơ sở chọn base model Ollama qwen2.5:1.5b hỗ trợ tiếng Việt và JSON native | `Section 3.1 (Base Foundation Model Selection)` |
-| **20** | *Unveiling the Secret Recipe* (Aldo Pareja) | 2024 | arXiv preprint | Engineering Methodology & Empirical Guide | Kỹ thuật prompt tinh gọn và guardrails cho SLM tránh lặp và giảm độ trễ | `Section 3.6 (Prompt Optimization` |
+**Tổng quan.** Bài báo là nghiên cứu thực nghiệm có hệ thống về tinh chỉnh có giám sát (SFT) cho LLM cỡ nhỏ (3B–7B) trên dữ liệu chỉ dẫn về tri thức và kỹ năng, với bốn mô hình mở. Phát hiện chính: (i) batch size lớn kết hợp learning rate thấp cho kết quả tốt hơn trên MMLU, MTBench và Open LLM Leaderboard; (ii) động lực huấn luyện giai đoạn đầu (gradient norm thấp, loss cao) dự báo tốt hiệu năng cuối, cho phép dừng sớm các lần chạy kém; (iii) bỏ warmup và dùng learning rate hằng số không làm giảm hiệu năng; (iv) huấn luyện “gộp” (stacked) ngang hoặc hơn huấn luyện “theo pha” (phased) mà hiệu quả mẫu hơn.
+
+- **Phương pháp:** Nghiên cứu thực nghiệm siêu tham số SFT cho LLM 3B–7B
+- **Dữ liệu:** Dữ liệu tổng hợp theo taxonomy LAB
+- **Thước đo:** MMLU, MTBench, GSM8K…
+- **Kết quả chính:** Batch lớn + LR thấp tổng quát tốt hơn; stacked ≈ phased nhưng ít mẫu hơn.
+- **Hạn chế:** Chỉ 3B–7B; không xét LoRA.
+- **Áp dụng cho Sys_3_4:** Hướng dẫn nếu nhóm tinh chỉnh Qwen2.5 cho thủ tục hành chính.
 
 ---
 
-## Khung cấu trúc bài báo khoa học đề xuất cho Dự án V10.5
+## Nhóm 06: Vietnamese Legal & Public Admin AI — Pháp lý và hành chính tiếng Việt
 
-> Dựa trên 20 bài báo khoa học đã thu thập và đánh giá, nhóm nghiên cứu V10.5 có thể tổ chức bài báo khoa học (dự kiến gửi Hội nghị/Tạp chí quốc tế thuộc IEEE/ACM/Springer hoặc SCITEPRESS) theo khung 5 phần sau:
+### 21. ViGPTQA – State-of-the-Art LLMs for Vietnamese Question Answering: System Overview, Core Models Training, and Evaluations
+- **Tác giả:** Minh-Thuan Nguyen, Khanh-Tung Tran, Vincent Nguyen, Xuan-Son Vu
+- **Năm:** 2023
+- **Nguồn công bố:** Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing: Industry Track (EMNLP 2023), trang 754–764 — hội nghị có bình duyệt (peer-reviewed), ACL Anthology
+- **DOI / Link:** [https://aclanthology.org/2023.emnlp-industry.70/](https://aclanthology.org/2023.emnlp-industry.70/)
+- **Tệp toàn văn:** [`ViGPTQA - State-of-the-Art LLMs for Vietnamese Question Answering.pdf`](06_Vietnamese_Legal_and_Public_Admin_AI/21_ViGPTQA_2023_Vietnamese_Legal_QA/ViGPTQA%20-%20State-of-the-Art%20LLMs%20for%20Vietnamese%20Question%20Answering.pdf)
+- **Tóm tắt chi tiết:** [`paper_01.md`](../../02_related_work/paper_summaries/paper_01.md)
 
-```
-[Title Proposal]
-A Grounded Dual-System RAG Architecture with Local Edge SLMs for Verified Public Administration Assistance
-(Kiến trúc RAG hệ thống kép có kiểm chứng với mô hình ngôn ngữ nhỏ cục bộ cho trợ lý hành chính công)
-```
+**Tổng quan.** Bài báo xây dựng ViGPTQA – một hệ thống hỏi đáp tiếng Việt chạy thực tế dựa trên LLM – và đề xuất ViGPT, một LLM đơn ngữ tiếng Việt được tinh chỉnh theo chỉ dẫn (instruction-tuned), cùng biến thể chuyên miền pháp luật ViGPT-Law. Nhóm tác giả công bố thêm các bộ dữ liệu đánh giá mới (ViLawsQA, ViTruthfulQA) và mã nguồn, trọng số mô hình. Kết quả chính: trên ViLawsQA, khi có ngữ cảnh truy xuất, ViGPT-Law-v2 đạt điểm người đánh giá 2,17–2,24/4 (2,52/4 với ngữ cảnh chuẩn), trong khi không có ngữ cảnh chỉ đạt tối đa 1,23/4.
 
-### 1. Introduction (Mở đầu)
-- **Bối cảnh:** Chuyển đổi số dịch vụ công và áp lực giải đáp thủ tục hành chính cho người dân tại cấp chính quyền địa phương.
-- **Thách thức cốt lõi:**
-  1. Rủi ro ảo giác số liệu (lệ phí, thời hạn giải quyết, hồ sơ thiếu/thừa) gây hậu quả pháp lý nghiêm trọng (*dẫn chứng: Samson et al., 2026; Zhao et al., 2026*).
-  2. Nguy cơ rò rỉ dữ liệu cá nhân của công dân khi gửi thông tin lên Cloud LLMs thương mại (*dẫn chứng: GuidaPA - Jimenez-Gutierrez et al., 2026; Aralimatti et al., 2025*).
-- **Đóng góp của nghiên cứu (Our Contributions):**
-  - Đề xuất kiến trúc **Dual-System RAG**: kết hợp CSDL thủ tục cấu trúc SQLite FTS5 (System 2 - tra cứu chính xác tuyệt đối) với Web Search (System 1 - phản ứng động).
-  - Thiết kế cơ chế **Grounding Guard** chặn đứng ảo giác bịa đặt số liệu và tự động cắt bỏ danh sách hồ sơ suy diễn không có căn cứ.
-  - Tối ưu hóa chu trình phản hồi trên mô hình nhỏ **Qwen2.5-1.5B/3B chạy on-premise** qua Ollama, giảm độ trễ từ 1.55s xuống 0.38s (gấp 4 lần).
-
-### 2. Related Work (Các nghiên cứu liên quan)
-- **2.1. AI & Chatbots in Public Administration:** Trích dẫn các công trình e-Government tiêu biểu (*GuidaPA - Jimenez-Gutierrez et al., 2026; GovAI-Pipe - Kaplan, 2026; COPAL - Liu et al., 2026*).
-- **2.2. Legal & Regulatory Retrieval-Augmented Generation:** RAG pháp lý và quy định: soạn văn bản dựa trên truy xuất, benchmark truy xuất, tỉ lệ khẳng định không có căn cứ, truy xuất thích ứng (*LegalCheck - van der Meer & Rossi, 2026; LegalBench-RAG - Pipitone & Houir Alami, 2024; CanLegalRAGBench - Zhao et al., 2026; HyPA-RAG - Kalra et al., 2024*); BM25 thắng dense trên tài liệu nhiều số liệu (*Akarsu et al., 2026*).
-- **2.3. Hallucination Mitigation & Fact Verification:** Các mô hình kiểm chứng độc lập (*CoVe - Dhuliawala et al., 2023; Self-RAG - Asai et al., 2024; CRITIC - Gou et al., 2024; GASP - Bouke, 2026*).
-- **2.4. Edge SLM Deployment & Domain SFT:** Năng lực của mô hình nhỏ triển khai tại trạm cơ sở (*Aralimatti et al., 2025; Qwen Team, 2024; Pareja et al., 2024*).
-
-### 3. Proposed Architecture (Kiến trúc hệ thống đề xuất)
-- **3.1. Overview & Dual-System Pipeline:** Sơ đồ luồng phân tách 2 Turn (Turn 1: Database Extraction -> Turn 2: Natural Dialogue Synthesis).
-- **3.2. Intent Routing & Gatekeeper:** Cơ chế phân loại câu hỏi công dân (hỏi thủ tục, hỏi xã giao, hay ngoài phạm vi).
-- **3.3. Hierarchical Authority Ranking & Synonym Expansion:** Thuật toán chuẩn hóa từ vựng dân gian (`synonyms.json`) và xếp hạng ưu tiên thẩm quyền cấp cơ sở (Xã > Huyện > Tỉnh > Trung ương).
-- **3.4. Grounding Guard & Output Verifier:** Cơ chế đối chiếu chéo số liệu đầu ra với bảng thuộc tính CSDL gốc; loại bỏ hoàn toàn các dòng văn bản tự suy diễn sau dấu hai chấm.
-
-### 4. Experimental Evaluation (Đánh giá thực nghiệm)
-- **Tập dữ liệu kiểm thử:** Bộ benchmark gồm 103 câu hỏi tình huống thực tế của công dân (thủ tục tư pháp, hộ tịch, đất đai, cư trú).
-- **Tiêu chí đánh giá (Metrics):**
-  - **Procedural Identification Accuracy:** Tỷ lệ nhận diện đúng mã và tên thủ tục hành chính (đạt 100/103 câu ~ 97.1%).
-  - **Numeric Factuality (Tỷ lệ chính xác số liệu):** So sánh tỷ lệ bịa đặt tiền lệ phí và số ngày xử lý giữa Base LLM (42.3% ảo giác) vs V10.5 Grounding Guard (0% ảo giác).
-  - **Inference Latency & Edge Footprint:** Đo lường thời gian đáp ứng (0.38s/turn trên phần cứng phổ thông không cần card đồ họa đắt tiền) và mức tiêu thụ VRAM (< 2GB).
-
-### 5. Discussion & Future Work (Thảo luận & Hướng phát triển)
-- Phân tích khả năng mở rộng sang các dịch vụ công cấp tỉnh/thành phố khác.
-- Đánh giá khả năng thích ứng khi văn bản quy phạm pháp luật thay đổi theo thời gian.
-- Kết luận về tính khả thi của mô hình AI biên (Edge AI) tự chủ trong hành chính công Việt Nam.
-
+- **Phương pháp:** Tinh chỉnh chỉ dẫn LLM tiếng Việt (ViGPT) + RAG
+- **Dữ liệu:** ViLawsQA (1.020 bộ, 27 lĩnh vực luật), ViTruthfulQA, MRC tiếng Việt
+- **Thước đo:** ROUGE-1, điểm người (0–4)
+- **Kết quả chính:** ViGPT-Law-v2 + ngữ cảnh chuẩn đạt ROUGE-1 45,33, điểm người 2,52; không có ngữ cảnh thì câu trả lời phần lớn không hữu ích.
+- **Hạn chế:** Dữ liệu chỉ dẫn tiếng Việt còn yếu; tính trung thực chưa tuyệt đối.
+- **Áp dụng cho Sys_3_4:** Khẳng định cần ngữ cảnh truy hồi khi hỏi đáp pháp luật tiếng Việt; định hướng chọn LLM hỗ trợ tốt tiếng Việt.
 
 ---
 
-## Nhóm 7: Hạ Tầng Kỹ Thuật & Vận Hành Quy Mô Lớn (Production Engineering & Serving)
+### 23. Integrating Information Retrieval and Large Language Models for Vietnamese Legal Document Query Systems
+- **Tác giả:** Pham Thi Xuan Hien, Duong Ngoc Thao Nhi, Pham Thi Ngoc Huyen
+- **Năm:** 2025
+- **Nguồn công bố:** Proceedings of the 17th International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management (IC3K 2025) – Vol. 2: KEOD và KMIS, trang 290–300, SCITEPRESS — hội nghị có bình duyệt
+- **DOI / Link:** [https://doi.org/10.5220/0013751200004000](https://doi.org/10.5220/0013751200004000)
+- **Tệp toàn văn:** [`Integrating Information Retrieval and Large Language Models for Vietnamese Legal Document Query Systems.pdf`](06_Vietnamese_Legal_and_Public_Admin_AI/23_Hien_2025_Integrating_IR_LLM_Vietnamese_Legal/Integrating%20Information%20Retrieval%20and%20Large%20Language%20Models%20for%20Vietnamese%20Legal%20Document%20Query%20Systems.pdf)
+- **Tóm tắt chi tiết:** [`paper_02.md`](../../02_related_work/paper_summaries/paper_02.md)
 
-### 26. GPTCache: An Open-Source Semantic Cache for LLM Applications
-- **Tác giả:** Fu Bang, Shen Bao, Hao Du et al. (Zilliz)
-- **Năm xuất bản:** 2023 (*Proc. NLP-OSS 2023 @ ACL*)
-- **arXiv:** [arXiv:2311.01723](https://arxiv.org/abs/2311.01723)
-- **Đóng góp cốt lõi:** Bộ nhớ đệm ngữ nghĩa vector (Semantic Caching) trên Redis, giảm độ trễ truy vấn các câu hỏi tương đồng xuống < 15ms, tiết kiệm tài nguyên GPU tối đa.
+**Tổng quan.** Bài báo đề xuất một hệ thống hỏi đáp văn bản pháp luật Việt Nam theo kiến trúc RAG, kết hợp truy xuất vector với LLM (GPT-4) để sinh câu trả lời có trích dẫn. Đóng góp chính là kiến trúc ba tầng xử lý và “tri-vector database” gồm ba chỉ mục riêng: đoạn văn bản luật, cặp hỏi-đáp và tóm tắt tri thức. Theo bài báo, hệ thống đạt Context Recall 0,847, độ chính xác trích dẫn pháp lý 94,2% và điểm hài lòng người dùng trung bình 4,23/5.
+
+- **Phương pháp:** IR + LLM truy vấn văn bản pháp luật (RAG phân cấp)
+- **Dữ liệu:** 45.000 văn bản, 12 lĩnh vực; 2.000 cặp hỏi–đáp do chuyên gia xác nhận
+- **Thước đo:** Context Precision/Recall, MRR, ROUGE, Legal Citation Accuracy
+- **Kết quả chính:** Citation Accuracy 94,2% (baseline tốt nhất 81,2%); độ chính xác giảm theo độ phức tạp câu hỏi.
+- **Hạn chế:** Khó xử lý quy định mâu thuẫn; phụ thuộc kho đã xử lý.
+- **Áp dụng cho Sys_3_4:** Công trình gần nhất về RAG pháp luật Việt Nam; bài học trích dẫn điều khoản.
+
+---
+
+### 24. Crossing Linguistic Horizons: Finetuning and Comprehensive Evaluation of Vietnamese Large Language Models
+- **Tác giả:** Sang T. Truong, Duc Q. Nguyen, Toan Nguyen, Dong D. Le, Nhi N. Truong, Tho Quan, Sanmi Koyejo (Stanford University; Trường ĐH Bách khoa – ĐHQG TP.HCM)
+- **Năm:** 2024
+- **Nguồn công bố:** Findings of the Association for Computational Linguistics: NAACL 2024, trang 2849–2900 — hội nghị có bình duyệt, ACL Anthology
+- **DOI / Link:** [https://aclanthology.org/2024.findings-naacl.182/](https://aclanthology.org/2024.findings-naacl.182/)
+- **Tệp toàn văn:** [`Crossing Linguistic Horizons - Finetuning and Comprehensive Evaluation of Vietnamese Large Language Models.pdf`](06_Vietnamese_Legal_and_Public_Admin_AI/24_Truong_2024_Vietnamese_LLMs_Finetune_Evaluation/Crossing%20Linguistic%20Horizons%20-%20Finetuning%20and%20Comprehensive%20Evaluation%20of%20Vietnamese%20Large%20Language%20Models.pdf)
+- **Tóm tắt chi tiết:** [`paper_03.md`](../../02_related_work/paper_summaries/paper_03.md)
+
+**Tổng quan.** Bài báo tinh chỉnh và công bố năm LLM tiếng Việt mã nguồn mở (URA-LLaMa 7B/13B/70B dựa trên LLaMa-2, MixSUra dựa trên Mixtral 8×7B, GemSUra 7B dựa trên Gemma 7B), đồng thời xây dựng khung đánh giá toàn diện gồm 10 kịch bản và 31 chỉ số, áp dụng cho 14 LLM. Kết luận chính: tinh chỉnh giúp chuyển giao tri thức giữa các ngôn ngữ; mô hình lớn hơn có thể thiên kiến và kém hiệu chỉnh (calibration) hơn; chất lượng dữ liệu tinh chỉnh là yếu tố then chốt hơn số tham số.
+
+- **Phương pháp:** Tinh chỉnh LLaMa-2 cho tiếng Việt, đánh giá toàn diện
+- **Dữ liệu:** Nhiều tác vụ tiếng Việt (QA, tóm tắt, phân loại, suy luận…), 31 chỉ số, 14 LLM
+- **Thước đo:** Độ chính xác theo tác vụ, hiệu chỉnh, thiên kiến, độc hại
+- **Kết quả chính:** GPT-4 tốt nhất; mô hình tinh chỉnh vượt LLaMa-2 nền; kích thước không quyết định.
+- **Hạn chế:** Nguy cơ nhiễm dữ liệu; dữ liệu tiếng Việt hạn chế.
+- **Áp dụng cho Sys_3_4:** Cơ sở chọn và đánh giá LLM cho tiếng Việt (Qwen2.5 trong Sys_3_4).
+
+---
+
+### 25. Improving Vietnamese-English Cross-Lingual Retrieval for Legal and General Domains
+- **Tác giả:** Toan Ngoc Nguyen, Nam Le Hai, Nguyen Doan Hieu, Dai An Nguyen, Linh Ngo Van, Thien Huu Nguyen, Sang Dinh (BKAI – ĐH Bách khoa Hà Nội; University of Oregon)
+- **Năm:** 2025
+- **Nguồn công bố:** Proceedings of NAACL 2025 (Volume 2: Short Papers), trang 142–153 — hội nghị có bình duyệt, ACL Anthology
+- **DOI / Link:** [https://aclanthology.org/2025.naacl-short.12/](https://aclanthology.org/2025.naacl-short.12/)
+- **Tệp toàn văn:** [`Improving Vietnamese-English Cross-Lingual Retrieval for Legal and General Domains.pdf`](06_Vietnamese_Legal_and_Public_Admin_AI/25_Nguyen_2025_ViEn_CrossLingual_Legal_Retrieval/Improving%20Vietnamese-English%20Cross-Lingual%20Retrieval%20for%20Legal%20and%20General%20Domains.pdf)
+- **Tóm tắt chi tiết:** [`paper_04.md`](../../02_related_work/paper_summaries/paper_04.md)
+
+**Tổng quan.** Bài báo xây dựng bộ dữ liệu truy xuất văn bản pháp luật tiếng Việt VNLawQC (từ Thư viện Pháp luật), bộ dữ liệu tổng hợp VNSynLawQC và bộ dữ liệu truy xuất xuyên ngôn ngữ Việt–Anh cho cả miền pháp luật và miền tổng quát. Tác giả đề xuất hàm mất mát phụ (auxiliary loss) và chiến lược huấn luyện đối xứng (symmetrical training) để tinh chỉnh BGE-M3. Kết quả: trên VNLawQC (truy vấn tiếng Anh, văn bản tiếng Việt), điểm trung bình tăng từ 42,99 (BGE-M3 gốc, dense) lên 69,75 (tinh chỉnh xuyên ngôn ngữ + đối xứng).
+
+- **Phương pháp:** Tinh chỉnh BGE-M3 xuyên ngôn ngữ + dữ liệu tổng hợp
+- **Dữ liệu:** VNLawQC, VNSynLawQC, ZaloLegal2021, ZaloWikipediaQA
+- **Thước đo:** Recall/MRR (dense, dense+rerank)
+- **Kết quả chính:** VNLawQC Việt–Anh 42,99 → 69,75; ZaloLegal2021 53,63 → 80,55.
+- **Hạn chế:** Dữ liệu dựa vào dịch máy; chỉ một mô hình nền.
+- **Áp dụng cho Sys_3_4:** Trực tiếp liên quan BGE-M3 trong Friendly Engine; tinh chỉnh embedding cho văn bản pháp luật.
+
+---
+
+## Nhóm 07: Production Engineering & Serving — Hạ tầng phục vụ
+
+### 26. GPTCache: An Open-Source Semantic Cache for LLM Applications Enabling Faster Answers and Cost Savings
+- **Tác giả:** Bang Fu, Di Feng (Zilliz Inc.)
+- **Năm:** 2023
+- **Nguồn công bố:** Proceedings of the 3rd Workshop for Natural Language Processing Open Source Software (NLP-OSS 2023, tổ chức cùng EMNLP 2023), trang 212–218 — workshop có bình duyệt, ACL Anthology
+- **DOI / Link:** [https://aclanthology.org/2023.nlposs-1.24/](https://aclanthology.org/2023.nlposs-1.24/)
+- **Tệp toàn văn:** [`GPTCache - An Open-Source Semantic Cache for LLM Applications.pdf`](07_Production_Engineering_and_Serving/26_Fu_2023_GPTCache_Semantic_Cache_LLM/GPTCache%20-%20An%20Open-Source%20Semantic%20Cache%20for%20LLM%20Applications.pdf)
+- **Tóm tắt chi tiết:** [`paper_24.md`](../../02_related_work/paper_summaries/paper_24.md)
+
+**Tổng quan.** GPTCache là bộ nhớ đệm ngữ nghĩa mã nguồn mở cho ứng dụng LLM: truy vấn được nhúng thành vector và so khớp với các câu hỏi đã lưu; nếu đủ tương đồng thì trả về câu trả lời đã lưu mà không gọi LLM. Theo tác giả, khi trúng cache, tốc độ phản hồi nhanh gấp 2–10 lần (khoảng 0,3 giây so với trung bình 3 giây của ChatGPT) và không tốn token.
+
+- **Phương pháp:** Cache truy vấn bằng embedding + bộ đánh giá tương đồng
+- **Dữ liệu:** Cặp câu tự tạo bằng ChatGPT (30.000 khóa)
+- **Thước đo:** Tỷ lệ trúng, trúng đúng/sai, độ trễ
+- **Kết quả chính:** 876/1.000 trúng (39 sai); độ trễ khi trúng ~0,2 s.
+- **Hạn chế:** Trúng sai rõ rệt; phụ thuộc embedding.
+- **Áp dụng cho Sys_3_4:** Cảnh báo rủi ro trả nhầm thủ tục tương tự khi dùng cache.
+
+---
 
 ### 27. RouteLLM: Learning to Route LLMs with Preference Data
-- **Tác giả:** Isaac Ong, Amjad Almahairi, Vincent Wu, Wei-Lin Chiang, Ion Stoica et al. (LMSYS Org, UC Berkeley)
-- **Năm xuất bản:** 2024 (*arXiv:2406.18665*)
-- **Đóng góp cốt lõi:** Bộ định tuyến động câu hỏi dựa trên độ phức tạp, phân luồng Fast Path (<0.5s) cho các câu hỏi tra cứu đơn mục và Slow Path cho câu hỏi đa ý định/suy luận sâu. Giúp tiết kiệm hơn 50% chi phí tính toán.
+- **Tác giả:** Isaac Ong, Amjad Almahairi, Vincent Wu, Wei-Lin Chiang, Tianhao Wu, Joseph E. Gonzalez, M Waleed Kadous, Ion Stoica (UC Berkeley; Anyscale; Canva)
+- **Năm:** 2025 (preprint 6/2024)
+- **Nguồn công bố:** The Thirteenth International Conference on Learning Representations (ICLR 2025) — hội nghị hàng đầu, có bình duyệt (bản PDF ghi “Published as a conference paper at ICLR 2025”)
+- **DOI / Link:** [https://proceedings.iclr.cc/paper_files/paper/2025/hash/5503a7c69d48a2f86fc00b3dc09de686-Abstract-Conference.html](https://proceedings.iclr.cc/paper_files/paper/2025/hash/5503a7c69d48a2f86fc00b3dc09de686-Abstract-Conference.html)
+- **Tệp toàn văn:** [`RouteLLM - Learning to Route LLMs with Preference Data.pdf`](07_Production_Engineering_and_Serving/27_Ong_2024_RouteLLM_Learning_Route_LLMs/RouteLLM%20-%20Learning%20to%20Route%20LLMs%20with%20Preference%20Data.pdf)
+- **Tóm tắt chi tiết:** [`paper_25.md`](../../02_related_work/paper_summaries/paper_25.md)
 
-### 28. Efficient Memory Management for Large Language Model Serving with PagedAttention (vLLM)
-- **Tác giả:** Woosuk Kwon, Zhuohan Li, Siyuan Shen, Lianmin Zheng, Ion Stoica, Joseph E. Gonzalez (UC Berkeley)
-- **Năm xuất bản:** 2023 (*Proc. 29th ACM SOSP 2023*)
-- **arXiv:** [arXiv:2309.06180](https://arxiv.org/abs/2309.06180)
-- **Đóng góp cốt lõi:** Thuật toán quản lý bộ nhớ KV Cache dạng trang phân mảnh ảo (PagedAttention), triệt tiêu hoàn toàn lãng phí bộ nhớ GPU và tăng thông lượng phục vụ đồng thời lên gấp 3-4 lần.
+**Tổng quan.** RouteLLM là khung học bộ định tuyến (router) chọn giữa một LLM mạnh nhưng đắt (GPT-4) và một LLM yếu nhưng rẻ (Mixtral-8x7B) cho từng truy vấn, học từ dữ liệu sở thích của người dùng (Chatbot Arena) kèm tăng cường dữ liệu. Kết quả: giảm chi phí hơn 2 lần mà không giảm đáng kể chất lượng (tới 3,66 lần trên MT Bench ở mức 95% chất lượng GPT-4), và router tổng quát được sang cặp mô hình không có trong dữ liệu huấn luyện.
 
-### 29. Nougat: Neural Optical Understanding for Academic Documents
-- **Tác giả:** Lukas Blecher, Guillem Cucurull, Phillip Isola, Fabian Retkowski (Meta AI)
-- **Năm xuất bản:** 2023 (*arXiv:2308.13418*)
-- **Đóng góp cốt lõi:** Mô hình thị giác hiểu tài liệu (Visual Document Understanding), trích xuất chính xác cấu trúc bảng biểu, biểu mẫu thủ tục hành chính phức tạp thành Markdown chuẩn mà không bị vỡ cột.
+- **Phương pháp:** Router học từ dữ liệu ưu tiên chọn mô hình mạnh/yếu
+- **Dữ liệu:** Chatbot Arena + tăng cường; MMLU, MT Bench, GSM8K
+- **Thước đo:** APGR, CPT
+- **Kết quả chính:** Matrix factorization APGR 0,802 trên MT Bench; cần dữ liệu trong miền.
+- **Hạn chế:** Chỉ hai mô hình; phân phối thực tế có thể khác.
+- **Áp dụng cho Sys_3_4:** Cơ sở cho định tuyến Strict/Friendly Engine.
 
 ---
 
-## Nhóm 8: Căn Chỉnh Đa Miền, MCP & Tự Động Đánh Giá (Universal Domain & Auto Evaluation)
+### 28. Efficient Memory Management for Large Language Model Serving with PagedAttention (vLLM)
+- **Tác giả:** Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph E. Gonzalez, Hao Zhang, Ion Stoica (UC Berkeley; Stanford; UC San Diego)
+- **Năm:** 2023
+- **Nguồn công bố:** Proceedings of the 29th ACM Symposium on Operating Systems Principles (SOSP ’23), Koblenz, Đức — hội nghị hàng đầu về hệ điều hành/hệ thống, có bình duyệt
+- **DOI / Link:** [https://doi.org/10.1145/3600006.3613165](https://doi.org/10.1145/3600006.3613165)
+- **Tệp toàn văn:** [`Efficient Memory Management for Large Language Model Serving with PagedAttention.pdf`](07_Production_Engineering_and_Serving/28_Kwon_2023_vLLM_PagedAttention_Memory_Management/Efficient%20Memory%20Management%20for%20Large%20Language%20Model%20Serving%20with%20PagedAttention.pdf)
+- **Tóm tắt chi tiết:** [`paper_26.md`](../../02_related_work/paper_summaries/paper_26.md)
+
+**Tổng quan.** Bài báo đề xuất PagedAttention — thuật toán attention lấy cảm hứng từ bộ nhớ ảo và phân trang của hệ điều hành — và xây dựng vLLM, hệ thống phục vụ LLM đạt mức lãng phí bộ nhớ KV cache gần bằng 0 và chia sẻ KV cache linh hoạt trong và giữa các yêu cầu. Theo đánh giá, vLLM tăng thông lượng 2–4 lần so với FasterTransformer và Orca ở cùng mức độ trễ; lợi ích lớn hơn với chuỗi dài, mô hình lớn và thuật toán giải mã phức tạp.
+
+- **Phương pháp:** PagedAttention quản lý KV cache theo trang
+- **Dữ liệu:** Tải công việc từ ShareGPT, Alpaca
+- **Thước đo:** Thông lượng ở cùng độ trễ
+- **Kết quả chính:** Thông lượng cao hơn 2–4 lần so với hệ thống trước.
+- **Hạn chế:** Kernel attention chậm hơn 20–26%.
+- **Áp dụng cho Sys_3_4:** Nền tảng phục vụ Qwen2.5 on-prem (vLLM).
+
+---
+
+### 29. Nougat: Neural Optical Understanding for Academic Documents
+- **Tác giả:** Lukas Blecher, Guillem Cucurull, Thomas Scialom, Robert Stojnic (Meta AI)
+- **Năm:** 2024 (preprint 8/2023)
+- **Nguồn công bố:** The Twelfth International Conference on Learning Representations (ICLR 2024) — hội nghị hàng đầu, có bình duyệt (OpenReview)
+- **DOI / Link:** [https://proceedings.iclr.cc/paper_files/paper/2024/hash/a39a9aceda771cded859ae7560530e09-Abstract-Conference.html](https://proceedings.iclr.cc/paper_files/paper/2024/hash/a39a9aceda771cded859ae7560530e09-Abstract-Conference.html)
+- **Tệp toàn văn:** [`Nougat - Neural Optical Understanding for Academic Documents.pdf`](07_Production_Engineering_and_Serving/29_Blecher_2023_Nougat_Neural_Optical_Understanding/Nougat%20-%20Neural%20Optical%20Understanding%20for%20Academic%20Documents.pdf)
+- **Tóm tắt chi tiết:** [`paper_27.md`](../../02_related_work/paper_summaries/paper_27.md)
+
+**Tổng quan.** Nougat là mô hình Transformer mã hóa–giải mã chuyển ảnh trang tài liệu khoa học thành văn bản markup (Markdown có LaTeX cho công thức và bảng) mà không cần bộ OCR bên ngoài hay văn bản nhúng trong PDF. Trên tập test arXiv, Nougat base (350M tham số) đạt edit distance 0,071, BLEU 89,1, F1 93,1 — vượt xa văn bản nhúng trong PDF (F1 79,2) và GROBID + LaTeX-OCR (F1 73,0).
+
+- **Phương pháp:** Transformer ảnh → markup (Swin + mBART)
+- **Dữ liệu:** arXiv, PubMed Central, Industry Documents
+- **Thước đo:** Edit distance, BLEU, METEOR, F1
+- **Kết quả chính:** F1 93,1; bảng F1 78,0; lặp ở 1,5% trang.
+- **Hạn chế:** Chủ yếu tiếng Anh, tài liệu khoa học.
+- **Áp dụng cho Sys_3_4:** Tham khảo trích xuất bảng biểu từ văn bản thủ tục.
+
+---
+
+## Nhóm 08: Universal Domain & Auto Evaluation — Căn chỉnh, pipeline và đánh giá tự động
 
 ### 30. Constitutional AI: Harmlessness from AI Feedback
-- **Tác giả:** Yuntao Bai, Saurav Kadavath, Sandipan Kundu et al. (Anthropic)
-- **Năm xuất bản:** 2022 (*arXiv:2212.08073*)
-- **Đóng góp cốt lõi:** Ràng buộc mô hình hành vi theo bộ nguyên tắc hiến pháp nghiêm ngặt, thiết lập ranh giới rõ ràng giữa Strict Mode (chỉ căn cứ tài liệu pháp lý, an toàn tuyệt đối) và Friendly Mode (giao tiếp tự nhiên, thân thiện).
+- **Tác giả:** Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, … , Jared Kaplan (Anthropic; 51 tác giả)
+- **Năm:** 2022
+- **Nguồn công bố:** arXiv preprint arXiv:2212.08073 (báo cáo nghiên cứu của Anthropic) — **không phải bài hội nghị/tạp chí có bình duyệt**. Nhóm giữ lại vì đây là công trình gốc của phương pháp “Constitutional AI / RLAIF”, được trích dẫn và áp dụng rất rộng rãi trong nghiên cứu căn chỉnh (alignment) LLM.
+- **DOI / Link:** [https://arxiv.org/abs/2212.08073](https://arxiv.org/abs/2212.08073)
+- **Tệp toàn văn:** [`Constitutional AI - Harmlessness from AI Feedback.pdf`](08_Universal_Domain_and_Auto_Evaluation/30_Bai_2022_Constitutional_AI_Harmlessness/Constitutional%20AI%20-%20Harmlessness%20from%20AI%20Feedback.pdf)
+- **Tóm tắt chi tiết:** [`paper_28.md`](../../02_related_work/paper_summaries/paper_28.md)
+
+**Tổng quan.** Bài báo đề xuất Constitutional AI (CAI): huấn luyện trợ lý AI vô hại mà **không dùng nhãn của con người về tính có hại**; giám sát của con người chỉ được cung cấp qua một danh sách ngắn các nguyên tắc bằng ngôn ngữ tự nhiên (“hiến pháp”, 16 nguyên tắc). Quy trình gồm giai đoạn học có giám sát (tự phê bình → tự sửa → tinh chỉnh) và giai đoạn học tăng cường từ phản hồi AI (RLAIF). Kết quả: mô hình RL-CAI vô hại hơn nhưng ít né tránh hơn — giải thích lý do khi từ chối thay vì chỉ từ chối — và được người đánh giá ưa chuộng hơn so với mô hình huấn luyện bằng nhãn có hại của con người.
+
+- **Phương pháp:** SL tự phê bình/sửa + RLAIF theo bộ nguyên tắc
+- **Dữ liệu:** 182.831 prompt red team; 135.296 prompt hữu ích
+- **Thước đo:** Elo hữu ích/vô hại, độ chính xác đánh giá HHH
+- **Kết quả chính:** RL-CAI vô hại hơn ở cùng mức hữu ích so với HH-RLHF.
+- **Hạn chế:** Vẫn cần nhãn người cho hữu ích; Goodhart khi quá huấn luyện.
+- **Áp dụng cho Sys_3_4:** Tinh thần nguyên tắc tường minh trong tầng policy.
+
+---
 
 ### 31. DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines
-- **Tác giả:** Omar Khattab, Arnav Singhvi, Paridhi Maheshwari et al. (Stanford University)
-- **Năm xuất bản:** 2024 (*Proc. ICLR 2024*)
-- **arXiv:** [arXiv:2310.03714](https://arxiv.org/abs/2310.03714)
-- **Đóng góp cốt lõi:** Trình biên dịch khai báo đường ống ngôn ngữ, tự động tối ưu hóa và sinh prompt template chuẩn xác theo từng miền dữ liệu hành chính/chuyên gia.
+- **Tác giả:** Omar Khattab, Arnav Singhvi, Paridhi Maheshwari, Zhiyuan Zhang, Keshav Santhanam, Sri Vardhamanan, Saiful Haq, Ashutosh Sharma, Thomas T. Joshi, Hanna Moazam, Heather Miller, Matei Zaharia, Christopher Potts
+- **Năm:** 2024 (bản arXiv v1: 10/2023)
+- **Nguồn công bố:** The Twelfth International Conference on Learning Representations (ICLR 2024) — hội nghị có bình duyệt (Spotlight). Lưu ý: tên chính thức trong kỷ yếu ICLR là “DSPy: Compiling Declarative Language Model Calls into **State-of-the-Art** Pipelines”; bản arXiv/PDF tham chiếu dùng tên “…Self-Improving Pipelines”.
+- **DOI / Link:** [https://proceedings.iclr.cc/paper_files/paper/2024/hash/f1cf02ce09757f57c3b93c0db83181e0-Abstract-Conference.html](https://proceedings.iclr.cc/paper_files/paper/2024/hash/f1cf02ce09757f57c3b93c0db83181e0-Abstract-Conference.html)
+- **Tệp toàn văn:** [`DSPy - Compiling Declarative Language Model Calls into Self-Improving Pipelines.pdf`](08_Universal_Domain_and_Auto_Evaluation/31_Khattab_2024_DSPy_Compiling_Declarative_Pipelines/DSPy%20-%20Compiling%20Declarative%20Language%20Model%20Calls%20into%20Self-Improving%20Pipelines.pdf)
+- **Tóm tắt chi tiết:** [`paper_29.md`](../../02_related_work/paper_summaries/paper_29.md)
+
+**Tổng quan.** Bài báo giới thiệu DSPy, một mô hình lập trình coi pipeline LLM là “đồ thị biến đổi văn bản” (text transformation graph): các lời gọi LM được khai báo bằng *signature* (mô tả vào/ra bằng ngôn ngữ tự nhiên), cài đặt bằng *module* có tham số, và được *teleprompter* (bộ tối ưu) tự động biên dịch thành prompt/demo hoặc trọng số tinh chỉnh dựa trên một metric. Trên GSM8K và HotPotQA, chương trình DSPy vài dòng, sau vài phút biên dịch, giúp GPT-3.5 và llama2-13b-chat vượt few-shot chuẩn lần lượt hơn 25% và 65%, và vượt pipeline dùng demo chuyên gia lần lượt 5–46% và 16–40%.
+
+- **Phương pháp:** Signature – module – teleprompter tự tối ưu demo/prompt
+- **Dữ liệu:** GSM8K, HotPotQA (200 train/300 dev)
+- **Thước đo:** Accuracy, EM, passage accuracy
+- **Kết quả chính:** GPT-3.5 vượt few-shot >25%, llama2-13b >65%; GSM8K CoT ensemble 88,3% dev.
+- **Hạn chế:** Chỉ hai case study; phụ thuộc chất lượng metric.
+- **Áp dụng cho Sys_3_4:** Tối ưu prompt/demo cho các bước Friendly Engine.
+
+---
 
 ### 32. ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs
-- **Tác giả:** Yujia Qin, Shihao Liang, Yining Ye et al. (Tsinghua University)
-- **Năm xuất bản:** 2024 (*Proc. ICLR 2024*)
-- **arXiv:** [arXiv:2307.16789](https://arxiv.org/abs/2307.16789)
-- **Đóng góp cốt lõi:** Khung chuẩn hóa tích hợp công cụ ngoại vi và xử lý cây quyết định DFS-DT, cung cấp nền tảng chuẩn mực cho giao thức Model Context Protocol (MCP) trong System 4.
+- **Tác giả:** Yujia Qin, Shihao Liang, Yining Ye, Kunlun Zhu, Lan Yan, Yaxi Lu, Yankai Lin, Xin Cong, Xiangru Tang, Bill Qian, Sihan Zhao, Lauren Hong, Runchu Tian, Ruobing Xie, Jie Zhou, Mark Gerstein, Dahai Li, Zhiyuan Liu, Maosong Sun (Tsinghua University, Yale, Renmin University, Tencent WeChat AI…)
+- **Năm:** 2024 (bản arXiv v2: 10/2023)
+- **Nguồn công bố:** The Twelfth International Conference on Learning Representations (ICLR 2024) — hội nghị có bình duyệt
+- **DOI / Link:** [https://proceedings.iclr.cc/paper_files/paper/2024/hash/28e50ee5b72e90b50e7196fde8ea260e-Abstract-Conference.html](https://proceedings.iclr.cc/paper_files/paper/2024/hash/28e50ee5b72e90b50e7196fde8ea260e-Abstract-Conference.html)
+- **Tệp toàn văn:** [`ToolLLM - Facilitating Large Language Models to Master 16000+ Real-world APIs.pdf`](08_Universal_Domain_and_Auto_Evaluation/32_Qin_2024_ToolLLM_Mastering_APIs/ToolLLM%20-%20Facilitating%20Large%20Language%20Models%20to%20Master%2016000%2B%20Real-world%20APIs.pdf)
+- **Tóm tắt chi tiết:** [`paper_30.md`](../../02_related_work/paper_summaries/paper_30.md)
+
+**Tổng quan.** Bài báo đề xuất ToolLLM, một khung tổng quát cho năng lực dùng công cụ (API) của LLM mã nguồn mở, gồm: bộ dữ liệu tinh chỉnh chỉ dẫn ToolBench (16.464 REST API thật từ RapidAPI, 49 danh mục), thuật toán suy luận cây quyết định tìm kiếm theo chiều sâu (DFSDT), bộ đánh giá tự động ToolEval, bộ truy hồi API dạng dense, và mô hình ToolLLaMA (LLaMA-2 7B tinh chỉnh). ToolLLaMA đạt hiệu năng gần với ChatGPT (mô hình “thầy”) và tổng quát hóa sang API chưa thấy cũng như sang bộ dữ liệu ngoài phân phối APIBench.
+
+- **Phương pháp:** ToolBench + DFSDT + API retriever + ToolLLaMA
+- **Dữ liệu:** 16.464 API, 126.486 cặp chỉ dẫn–lời giải; APIBench
+- **Thước đo:** Pass Rate, Win Rate (ToolEval), NDCG
+- **Kết quả chính:** ToolLLaMA-DFSDT pass 66,7 (ChatGPT-DFSDT 64,8); retriever NDCG@5 84,9 vs BM25 17,0.
+- **Hạn chế:** Đánh giá dựa ChatGPT; chi phí DFSDT.
+- **Áp dụng cho Sys_3_4:** Chọn thủ tục/công cụ đúng từ kho lớn; giới hạn hành động của LLM.
+
+---
 
 ### 33. RAGAS: Automated Evaluation of Retrieval Augmented Generation
-- **Tác giả:** Shahul Es, Jithin James, Luis Espinosa-Anke, Steven Schockaert
-- **Năm xuất bản:** 2024 (*Proc. EACL 2024*)
-- **arXiv:** [arXiv:2309.15217](https://arxiv.org/abs/2309.15217)
-- **Đóng góp cốt lõi:** Bộ công cụ đánh giá tự động đa chiều cho hệ thống RAG mà không cần gán nhãn thủ công: Faithfulness, Answer Relevance, Context Precision và Context Recall.
+- **Tác giả:** Shahul Es, Jithin James (Exploding Gradients), Luis Espinosa-Anke, Steven Schockaert (CardiffNLP, Cardiff University; AMPLYFI)
+- **Năm:** 2024
+- **Nguồn công bố:** Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics (EACL 2024): System Demonstrations, tr. 150–158 — hội nghị có bình duyệt (track demo)
+- **DOI / Link:** [https://aclanthology.org/2024.eacl-demo.16/](https://aclanthology.org/2024.eacl-demo.16/)
+- **Tệp toàn văn:** [`RAGAS - Automated Evaluation of Retrieval Augmented Generation.pdf`](08_Universal_Domain_and_Auto_Evaluation/33_Es_2024_RAGAS_Automated_Evaluation_RAG/RAGAS%20-%20Automated%20Evaluation%20of%20Retrieval%20Augmented%20Generation.pdf)
+- **Tóm tắt chi tiết:** [`paper_31.md`](../../02_related_work/paper_summaries/paper_31.md)
+
+**Tổng quan.** Bài báo giới thiệu RAGAS (Retrieval Augmented Generation Assessment), một khung đánh giá **không cần tham chiếu** (reference-free) cho pipeline RAG, gồm ba thước đo tính bằng cách prompt LLM: Faithfulness (câu trả lời có dựa trên ngữ cảnh truy hồi), Answer Relevance (câu trả lời có đáp đúng câu hỏi) và Context Relevance (ngữ cảnh có tập trung, ít thông tin thừa). Tác giả xây bộ dữ liệu WikiEval có nhãn người để kiểm tra mức đồng thuận, và cho thấy RAGAS khớp với đánh giá của người tốt hơn hai baseline dùng ChatGPT chấm trực tiếp.
+
+- **Phương pháp:** Faithfulness, Answer Relevance, Context Relevance không cần tham chiếu
+- **Dữ liệu:** WikiEval (50 trang Wikipedia)
+- **Thước đo:** Độ chính xác so với người (so sánh cặp)
+- **Kết quả chính:** Faithfulness 0,95; Answer Rel. 0,78; Context Rel. 0,70 (vượt GPT Score/Ranking).
+- **Hạn chế:** WikiEval nhỏ; phụ thuộc LLM đánh giá.
+- **Áp dụng cho Sys_3_4:** Thước đo cho Friendly Engine (RQ1, RQ3).
+
+---

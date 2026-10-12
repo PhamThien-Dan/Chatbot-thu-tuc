@@ -10,7 +10,7 @@ Toàn bộ tài liệu học thuật của đề tài được tổ chức theo 
 ```text
 .
 ├── 01_topic_proposal/       # Đề xuất đề tài và nhật ký chỉnh sửa (topic_proposal.md, topic_revision_log.md)
-├── 02_related_work/          # Khảo sát tài liệu, 32 bài báo, ma trận đối sánh (paper_list.md, literature_review_matrix.md)
+├── 02_related_work/          # Khảo sát tài liệu, 33 bài báo, ma trận đối sánh (paper_list.md, literature_review_matrix.md)
 ├── 03_problem_and_gap/       # Vấn đề thực tế, khoảng trống nghiên cứu, 4 câu hỏi nghiên cứu (RQ1 - RQ4)
 ├── 04_proposed_system/       # Kiến trúc hệ thống, tích hợp AI, sơ đồ luồng dữ liệu (system_architecture.md, diagrams/)
 ├── 05_methodology/           # Phương pháp luận, tập dữ liệu 1.350 thủ tục, baseline và chỉ số đánh giá

@@ -4,7 +4,7 @@
 - **Tác giả:** Minh-Thuan Nguyen, Khanh-Tung Tran, Vincent Nguyen, Xuan-Son Vu
 - **Năm xuất bản:** 2023
 - **Tạp chí / Hội nghị:** *Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing: Industry Track (EMNLP 2023)*, pages 754–764
-- **Link Citation / DOI:** [https://aclanthology.org/2023.emnlp-industry.71/](https://aclanthology.org/2023.emnlp-industry.71/)
+- **Link Citation / DOI:** [https://aclanthology.org/2023.emnlp-industry.70/](https://aclanthology.org/2023.emnlp-industry.70/)
 - **Tệp toàn văn (PDF):** ViGPTQA - State-of-the-Art LLMs for Vietnamese Question Answering.pdf
 
 ---
